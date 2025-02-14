@@ -142,7 +142,7 @@ def chat(user_message):
        Jawablah pertanyaan pengguna dengan jelas, singkat, sebutkan kecamatan, kabupaten/kota, dan provinsi lokasi yang diminta user berdasarkan data BMKG di atas, serta pastikan jawaban sesuai dengan tanggal dan waktu yang diminta. dan berikan saran kegiatan atau pengingat sesuai kedaan yang terjadi.
         """
 
-#85
+#haifauziah
         # Generate response dari model AI
         try:
             response = model.generate_content(prompt)
