@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Form</title>
+    <style>
+        /* Global styles */
+        body, textarea, button, .message {
+            font-family: "Arial", sans-serif;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Floating chat button */
+        #chatButton {
+            position: fixed;
+            bottom: 50px;
+            right: 40px;
+            width: 60px;
+            height: 60px;
+            background:transparent:
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            border: 2px solid #007BFF; /* Tambahkan border agar lebih terlihat */
+        }
+
+        #chatButton img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        /* Chat room styles */
+        #chatRoom {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 320px;
+            height: 500px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 20px; /* Lengkungan pada sudut */
+            display: none;
+            flex-direction: column;
+        }
+
+        #chatHeader {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        #chatHeader button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        #chatMessages {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            background-color: #f9f9f9;
+        }
+
+        .message-container {
+            display: flex;
+            justify-content: center; /* Center the message container */
+            align-items: center; /* Align items in the center */
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeIn 0.5s forwards;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 5px 0;
+
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .message {
+            padding: 10px;
+            margin: 8px 0; /* Menambahkan jarak antar pesan */
+            border-radius: 8px;
+            max-width: 80%;
+            word-wrap: break-word;
+            display: inline-block;
+            clear: both;
+        }
+
+        .user-message {
+            background-color: #DCF8C6;
+            align-self: flex-end;
+            text-align: right; /* Pesan pengguna di sebelah kanan */
+            margin-left: auto;
+            margin-right: 10px; /* Add some margin on the right */
+        }
+
+        .bot-message {
+            background-color: #E6E6E6;
+            align-self: flex-start;
+            text-align: left; /* Pesan bot di sebelah kiri */
+            margin-right: auto;
+            margin-left: 10px; /* Add some margin on the left */
+        }
+
+        .avatar {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 0 10px;
+            object-fit: cover; /* Menjaga agar gambar tidak terdistorsi */
+        }
+
+        #chatInput {
+            display: flex;
+            padding: 10px;
+            gap: 5px;
+            background-color: #f4f4f4;
+        }
+
+        #chatInput textarea {
+            flex: 1;
+            resize: none;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        #chatInput button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #chatInput button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="chatButton" onclick="toggleChatRoom()">
+        <img src="/static/_f966facc-21a2-4c19-868c-31507e4c5386.jpeg" alt="Chat Icon">
+    </div>
+
+    <form id="chatRoom">
+        <div id="chatHeader">
+            <span>WeatherBae</span>
+            <button id="closeBtn">X</button>
+        </div>
+        <div id="chatMessages"></div>
+        <div id="chatInput">
+            <textarea id="chat-input" placeholder="Tulis pesan di sini..." required></textarea>
+            <button id="send-btn" type="submit">Kirim</button>
+        </div>
+    </form>
+
+    <script>
+        function getWeatherByDateTime(data, targetDate, targetTime) {
+            let result = [];
+
+            // Iterasi melalui data utama
+            for (let i = 0; i < data.data.length; i++) {
+                let cuacaArray = data.data[i].cuaca;
+
+                // Iterasi melalui setiap array cuaca
+                for (let j = 0; j < cuacaArray.length; j++) {
+                    let cuacaSubArray = cuacaArray[j];
+
+                    // Periksa apakah data cuaca berada dalam array yang lebih dalam (nested arrays)
+                    if (Array.isArray(cuacaSubArray)) {
+                        for (let k = 0; k < cuacaSubArray.length; k++) {
+                            let cuacaItem = cuacaSubArray[k];
+
+                            // Periksa apakah 'local_datetime' ada dan cocok dengan target date dan time
+                            const cuacaDateTime = new Date(cuacaItem.local_datetime);
+                            const inputDate = new Date(targetDate + ' ' + targetTime);
+
+                            // Cocokkan tanggal dan waktu
+                            if (cuacaDateTime.getDate() === inputDate.getDate() &&
+                                cuacaDateTime.getMonth() === inputDate.getMonth() &&
+                                cuacaDateTime.getFullYear() === inputDate.getFullYear() &&
+                                cuacaDateTime.getHours() === inputDate.getHours()) {
+                                result.push(cuacaItem); // Menambahkan item cuaca yang sesuai
+                            }
+                        }
+                    }
+                }
+            }
+            return result;
+        }
+
+    // Menampilkan dan menyembunyikan chat room
+    document.getElementById("chatButton").addEventListener("click", function() {
+        const chatRoom = document.getElementById("chatRoom");
+        chatRoom.style.display = chatRoom.style.display === "flex" ? "none" : "flex";
+    });
+
+    // Menutup chat room
+    document.getElementById("closeBtn").addEventListener("click", function() {
+        const chatRoom = document.getElementById("chatRoom");
+        chatRoom.style.display = "none";
+    });
+
+    // Kirim pesan dengan menekan Enter
+    document.getElementById("chat-input").addEventListener("keypress", function(event) {
+    if (event.key === "Enter" && !event.shiftKey) { // Shift+Enter untuk baris baru
+        event.preventDefault(); // Mencegah baris baru di textarea
+        document.getElementById("send-btn").click(); // Klik tombol kirim secara otomatis
+    }
+});
+
+    document.getElementById("chatRoom").addEventListener("submit", async function(event) {
+        event.preventDefault(); // Mencegah form melakukan submit default
+
+        const inputField = document.getElementById("chat-input");
+        const chatMessages = document.getElementById("chatMessages");
+        const userInput = inputField.value.trim();
+
+        if (userInput) {
+            try {
+                // Menampilkan pesan pengguna
+                chatMessages.innerHTML += `
+                <div class="message-container user-message">
+                    <img src="/static/user chatbot.png" class="avatar" alt="User Avatar">
+                    <span>${userInput}</span>
+                </div>
+            `;
+
+                // Panggil API menggunakan fetch
+                const response = await fetch(`/chat/${encodeURIComponent(userInput)}`, {
+                    method: "GET",
+                });
+                console.log(response)
+                console.log("API Response:", response);
+
+                if (response.ok) {
+                    const data = await response.json(); // Asumsikan API mengembalikan JSON
+                    console.log(data);
+
+                    if (data.data) {
+                        // Ambil input tanggal dan waktu dari pengguna
+                        const [date, time] = userInput.split(" "); // Misalkan input formatnya 'YYYY-MM-DD HH:mm:ss'
+                        const weatherData = getWeatherByDateTime(data, date, time); // Ambil data cuaca berdasarkan input
+
+                        if (weatherData.length > 0) {
+                            const weather_desc = weatherData[0].weather_desc;
+                            const temperature = weatherData[0].t;
+                            const visibility = weatherData[0].vs_text;
+                            const windSpeed = weatherData[0].ws;
+
+                            // Menampilkan cuaca yang sesuai
+                            chatMessages.innerHTML += `
+                        <div class="message-container bot-message">
+                            <img src="/static/_f966facc-21a2-4c19-868c-31507e4c5386.jpeg" class="avatar" alt="Bot Avatar">
+                            <span>
+                        Cuaca: ${weather_desc}<br/>
+                        Suhu: ${temperature}°C<br/>
+                        Jarak Pandang: ${visibility}<br/>
+                        Kecepatan Angin: ${windSpeed} km/h<br/>
+                        Tanggal: ${weatherData[0].local_datetime}<br/>
+                        <strong>${getActivitas(weather_desc)}</strong>
+                            </span> 
+                        </div>`;
+                        } else {
+                            // Jika tidak ditemukan cuaca yang sesuai
+                            chatMessages.innerHTML += `
+                                <div class="message-container bot-message">
+                                    <img src="/static/_f966facc-21a2-4c19-868c-31507e4c5386.jpeg" class="avatar" alt="Bot Avatar">
+                                    <span>Tidak ada data cuaca yang tersedia untuk lokasi ini.</span>
+                                </div>
+                            `;
+                        }
+                    } else {
+                        chatMessages.innerHTML += `
+                            <div class="message-container bot-message">
+                                <img src="/static/_f966facc-21a2-4c19-868c-31507e4c5386.jpeg" class="avatar" alt="Bot Avatar">
+                                <span>${data.response}</span>
+                            </div>
+                        `;
+                    }
+                } else {
+                    chatMessages.innerHTML += `
+                    <div class="message bot-message">
+                        <img src="/static/_f966facc-21a2-4c19-868c-31507e4c5386.jpeg" class="avatar" alt="Bot Avatar">
+                        <span>Error: ${response.statusText}</span>
+                    </div>
+                `;
+                }
+            } catch (error) {
+                chatMessages.innerHTML += `
+                <div class="message bot-message">
+                    <img src="/static/_f966facc-21a2-4c19-868c-31507e4c5386.jpeg" class="avatar" alt="Bot Avatar">
+                    <span>Error: ${error.message}</span>
+                </div>
+            `;
+            }
+
+            // Bersihkan input setelah submit
+            inputField.value = "";
+            chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll ke bawah
+        }
+    });
+    </script>
+</body>
+</html>
