@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMKG Juanda</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/hal1.css') }}">
+</head>
+<body>
+    <button class="chatbot-button">
+        <img src="{{ url_for('static', filename='images/CHATBOT.png') }}" alt="Chatbot">
+    </button>
+    
+    <div class="chat-container" id="chatBox">
+        <img class="bmkg-logo" src="{{ url_for('static', filename='images/bmkg-logo.png') }}" alt="BMKG Logo">
+        <button type="button" id="closeBtn">&times;</button>
+        <h1>Halo Sobat BMKG Juanda</h1>
+        <p>Silahkan Pilih Pertanyaan Anda!</p>
+        <div style="margin-top: 10px;">
+            <button class="button" onclick="window.location.href='/cuaca'">Informasi Cuaca</button>
+            <button class="button" onclick="window.location.href='/umum'">Informasi Umum</button>
+        </div>
+        <div class="clock-container" id="chatBox">
+            <div id="clock">00:00</div>
+            <div id="date">1 Januari 2024</div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/hal1.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMKG Juanda</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/umum.css') }}">
+</head>
+<body>
+    <div class="chat-container" id="chatBox">
+        <div class="chat-header">
+            <div style="text-align: left;">
+                <span>🤓TANYA BMKG ?</span>
+            </div>
+            <!-- <span id="jam"></span> -->
+            <button id="closeChat" style="color:white; background:none; border:none; font-size:20px; font-weight:bold; transform: scaleY(-1); cursor:pointer;">&#x21A9;</button>        
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message" id="greetingMessage">Halo <span id="greeting"></span> Sobat BMKG Juanda! 🤗 Apa yang anda ingin ketahui dari BMKG/Fenomena Alam?</div>
+        </div>
+        <div class="chat-footer">
+            <select id="model-select" style="padding: 5px; font-size: 14px;">
+                <option value="gemini">Gemini 🤖</option>
+                <option value="deepseek">DeepSeek 🔍</option>
+            </select>
+            <textarea id="chat-input" placeholder="Tulis pesan di sini..." required style="width: 80%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;"></textarea>
+            <button id="send-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 21L23 12L2 3V10L17 12L2 14V21Z" fill="white"/></svg></button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/umum.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:transparent;
+    }
+    .chat-container {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px;
+    width: 350px;
+    height: 500px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif;
+
+    }
+    .chat-header {
+        background: #0047cb;
+        color: rgb(255, 255, 255);
+        padding: 8px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Arial', sans-serif;
+    }
+    .chat-header span {
+    font-size: 19px;
+    font-weight: bold;
+    margin-left: 8px;
+    font-family: 'Arial', sans-serif;
+    }
+    .chat-content {
+        padding: 15px;
+        text-align: left;
+        background: #ffff;
+        border-radius: 10px;
+        margin: 10px;
+        font-family: 'Arial', sans-serif;
+    }
+    .chat-messages {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto;
+        background-image: url("/static/images/cloud.jpg"); 
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #ffff; 
+        background-blend-mode: lighten; 
+        display: flex; 
+        flex-direction: column;
+        max-height: 400px;
+        font-family: 'Arial', sans-serif; 
+    }
+    .message {
+        padding: 8px;
+        margin: 5px;
+        border-radius: 8px;
+        max-width: fit-content;
+        word-wrap: break-word;
+        display: inline-block;
+        position: relative;
+        text-align: left;
+        font-size: 16px;
+        font-family: 'Arial', sans-serif;
+    }
+    .user-message {
+        background-color: #DCF8C6;
+        align-self: flex-end;
+        padding: 5px 5px;
+        font-family: 'Arial', sans-serif;
+    }
+    .bot-message {
+        background-color: #d8f6f6;
+        padding: 5px 5px;
+        text-align: left;
+        width: relative;
+        font-family: 'Arial', sans-serif;
+    }
+    .chat-footer {
+        display: flex;
+        justify-content: center;
+        background: #0047cb;
+        padding: 8px;
+        border-top: transparent;
+        font-family: 'Arial', sans-serif;
+    }
+    .chat-footer form {
+        display: flex;
+        width: 100%;
+        /* gap: 6px;  */
+        align-items: center;
+    }
+    .chat-footer textarea {
+        flex: 1;
+        resize: none;
+        padding: 5px 10px;
+        border: 1px solid #ddd;
+        border-radius: 10px; 
+        font-size: 12px;
+        height: 20px; 
+        outline: none;
+        margin-right: 6px;
+        font-family: 'Arial', sans-serif;
+    }
+    .chat-footer button {
+        width: 35px;
+        height: 39px;
+        background-color: #309800;
+        border: none;
+        border-radius: 2px;;
+        cursor: pointer;
+        margin-top: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .chat-footer button svg {
+        width: 20px;
+        height: 520px;
+        fill: white; 
+    }

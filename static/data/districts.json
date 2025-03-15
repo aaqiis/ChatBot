@@ -1,0 +1,2666 @@
+[
+    {
+        "label": "Donorojo, pacitan",
+        "value": "350101"
+    },
+    {
+        "label": "Pringkuku, pacitan",
+        "value": "350102"
+    },
+    {
+        "label": "Punung, pacitan",
+        "value": "350103"
+    },
+    {
+        "label": "Pacitan, pacitan",
+        "value": "350104"
+    },
+    {
+        "label": "Kebonagung, pacitan",
+        "value": "350105"
+    },
+    {
+        "label": "Arjosari, pacitan",
+        "value": "350106"
+    },
+    {
+        "label": "Nawangan, pacitan",
+        "value": "350107"
+    },
+    {
+        "label": "Bandar, pacitan",
+        "value": "350108"
+    },
+    {
+        "label": "Tegalombo, pacitan",
+        "value": "350109"
+    },
+    {
+        "label": "Tulakan, pacitan",
+        "value": "350110"
+    },
+    {
+        "label": "Ngadirojo, pacitan",
+        "value": "350111"
+    },
+    {
+        "label": "Sudimoro, pacitan",
+        "value": "350112"
+    },
+    {
+        "label": "Slahung, ponorogo",
+        "value": "350201"
+    },
+    {
+        "label": "Ngrayun, ponorogo",
+        "value": "350202"
+    },
+    {
+        "label": "Bungkal, ponorogo",
+        "value": "350203"
+    },
+    {
+        "label": "Sambit, ponorogo",
+        "value": "350204"
+    },
+    {
+        "label": "Sawoo, ponorogo",
+        "value": "350205"
+    },
+    {
+        "label": "Sooko, ponorogo",
+        "value": "350206"
+    },
+    {
+        "label": "Pulung, ponorogo",
+        "value": "350207"
+    },
+    {
+        "label": "Mlarak, ponorogo",
+        "value": "350208"
+    },
+    {
+        "label": "Jetis, ponorogo",
+        "value": "350209"
+    },
+    {
+        "label": "Siman, ponorogo",
+        "value": "350210"
+    },
+    {
+        "label": "Balong, ponorogo",
+        "value": "350211"
+    },
+    {
+        "label": "Kauman, ponorogo",
+        "value": "350212"
+    },
+    {
+        "label": "Badegan, ponorogo",
+        "value": "350213"
+    },
+    {
+        "label": "Sampung, ponorogo",
+        "value": "350214"
+    },
+    {
+        "label": "Sukorejo, ponorogo",
+        "value": "350215"
+    },
+    {
+        "label": "Babadan, ponorogo",
+        "value": "350216"
+    },
+    {
+        "label": "Ponorogo, ponorogo",
+        "value": "350217"
+    },
+    {
+        "label": "Jenangan, ponorogo",
+        "value": "350218"
+    },
+    {
+        "label": "Ngebel, ponorogo",
+        "value": "350219"
+    },
+    {
+        "label": "Jambon, ponorogo",
+        "value": "350220"
+    },
+    {
+        "label": "Pudak, ponorogo",
+        "value": "350221"
+    },
+    {
+        "label": "Panggul, trenggalek",
+        "value": "350301"
+    },
+    {
+        "label": "Munjungan, trenggalek",
+        "value": "350302"
+    },
+    {
+        "label": "Pule, trenggalek",
+        "value": "350303"
+    },
+    {
+        "label": "Dongko, trenggalek",
+        "value": "350304"
+    },
+    {
+        "label": "Tugu, trenggalek",
+        "value": "350305"
+    },
+    {
+        "label": "Karangan, trenggalek",
+        "value": "350306"
+    },
+    {
+        "label": "Kampak, trenggalek",
+        "value": "350307"
+    },
+    {
+        "label": "Watulimo, trenggalek",
+        "value": "350308"
+    },
+    {
+        "label": "Bendungan, trenggalek",
+        "value": "350309"
+    },
+    {
+        "label": "Gandusari, trenggalek",
+        "value": "350310"
+    },
+    {
+        "label": "Trenggalek, trenggalek",
+        "value": "350311"
+    },
+    {
+        "label": "Pogalan, trenggalek",
+        "value": "350312"
+    },
+    {
+        "label": "Durenan, trenggalek",
+        "value": "350313"
+    },
+    {
+        "label": "Suruh, trenggalek",
+        "value": "350314"
+    },
+    {
+        "label": "Tulungagung, tulungagung",
+        "value": "350401"
+    },
+    {
+        "label": "Boyolangu, tulungagung",
+        "value": "350402"
+    },
+    {
+        "label": "Kedungwaru, tulungagung",
+        "value": "350403"
+    },
+    {
+        "label": "Ngantru, tulungagung",
+        "value": "350404"
+    },
+    {
+        "label": "Kauman, tulungagung",
+        "value": "350405"
+    },
+    {
+        "label": "Pagerwojo, tulungagung",
+        "value": "350406"
+    },
+    {
+        "label": "Sendang, tulungagung",
+        "value": "350407"
+    },
+    {
+        "label": "Karangrejo, tulungagung",
+        "value": "350408"
+    },
+    {
+        "label": "Gondang, tulungagung",
+        "value": "350409"
+    },
+    {
+        "label": "Sumbergempol, tulungagung",
+        "value": "350410"
+    },
+    {
+        "label": "Ngunut, tulungagung",
+        "value": "350411"
+    },
+    {
+        "label": "Pucanglaban, tulungagung",
+        "value": "350412"
+    },
+    {
+        "label": "Rejotangan, tulungagung",
+        "value": "350413"
+    },
+    {
+        "label": "Kalidawir, tulungagung",
+        "value": "350414"
+    },
+    {
+        "label": "Besuki, tulungagung",
+        "value": "350415"
+    },
+    {
+        "label": "Campurdarat, tulungagung",
+        "value": "350416"
+    },
+    {
+        "label": "Bandung, tulungagung",
+        "value": "350417"
+    },
+    {
+        "label": "Pakel, tulungagung",
+        "value": "350418"
+    },
+    {
+        "label": "Tanggunggunung, tulungagung",
+        "value": "350419"
+    },
+    {
+        "label": "Wonodadi, blitar",
+        "value": "350501"
+    },
+    {
+        "label": "Udanawu, blitar",
+        "value": "350502"
+    },
+    {
+        "label": "Srengat, blitar",
+        "value": "350503"
+    },
+    {
+        "label": "Kademangan, blitar",
+        "value": "350504"
+    },
+    {
+        "label": "Bakung, blitar",
+        "value": "350505"
+    },
+    {
+        "label": "Ponggok, blitar",
+        "value": "350506"
+    },
+    {
+        "label": "Sanankulon, blitar",
+        "value": "350507"
+    },
+    {
+        "label": "Wonotirto, blitar",
+        "value": "350508"
+    },
+    {
+        "label": "Nglegok, blitar",
+        "value": "350509"
+    },
+    {
+        "label": "Kanigoro, blitar",
+        "value": "350510"
+    },
+    {
+        "label": "Garum, blitar",
+        "value": "350511"
+    },
+    {
+        "label": "Sutojayan, blitar",
+        "value": "350512"
+    },
+    {
+        "label": "Panggungrejo, blitar",
+        "value": "350513"
+    },
+    {
+        "label": "Talun, blitar",
+        "value": "350514"
+    },
+    {
+        "label": "Gandusari, blitar",
+        "value": "350515"
+    },
+    {
+        "label": "Binangun, blitar",
+        "value": "350516"
+    },
+    {
+        "label": "Wlingi, blitar",
+        "value": "350517"
+    },
+    {
+        "label": "Doko, blitar",
+        "value": "350518"
+    },
+    {
+        "label": "Kesamben, blitar",
+        "value": "350519"
+    },
+    {
+        "label": "Wates, blitar",
+        "value": "350520"
+    },
+    {
+        "label": "Selorejo, blitar",
+        "value": "350521"
+    },
+    {
+        "label": "Selopuro, blitar",
+        "value": "350522"
+    },
+    {
+        "label": "Semen, kediri",
+        "value": "350601"
+    },
+    {
+        "label": "Mojo, kediri",
+        "value": "350602"
+    },
+    {
+        "label": "Kras, kediri",
+        "value": "350603"
+    },
+    {
+        "label": "Ngadiluwih, kediri",
+        "value": "350604"
+    },
+    {
+        "label": "Kandat, kediri",
+        "value": "350605"
+    },
+    {
+        "label": "Wates, kediri",
+        "value": "350606"
+    },
+    {
+        "label": "Ngancar, kediri",
+        "value": "350607"
+    },
+    {
+        "label": "Puncu, kediri",
+        "value": "350608"
+    },
+    {
+        "label": "Plosoklaten, kediri",
+        "value": "350609"
+    },
+    {
+        "label": "Gurah, kediri",
+        "value": "350610"
+    },
+    {
+        "label": "Pagu, kediri",
+        "value": "350611"
+    },
+    {
+        "label": "Gampengrejo, kediri",
+        "value": "350612"
+    },
+    {
+        "label": "Grogol, kediri",
+        "value": "350613"
+    },
+    {
+        "label": "Papar, kediri",
+        "value": "350614"
+    },
+    {
+        "label": "Purwoasri, kediri",
+        "value": "350615"
+    },
+    {
+        "label": "Plemahan, kediri",
+        "value": "350616"
+    },
+    {
+        "label": "Pare, kediri",
+        "value": "350617"
+    },
+    {
+        "label": "Kepung, kediri",
+        "value": "350618"
+    },
+    {
+        "label": "Kandangan, kediri",
+        "value": "350619"
+    },
+    {
+        "label": "Tarokan, kediri",
+        "value": "350620"
+    },
+    {
+        "label": "Kunjang, kediri",
+        "value": "350621"
+    },
+    {
+        "label": "Banyakan, kediri",
+        "value": "350622"
+    },
+    {
+        "label": "Ringinrejo, kediri",
+        "value": "350623"
+    },
+    {
+        "label": "Kayen Kidul, kediri",
+        "value": "350624"
+    },
+    {
+        "label": "Ngasem, kediri",
+        "value": "350625"
+    },
+    {
+        "label": "Badas, kediri",
+        "value": "350626"
+    },
+    {
+        "label": "Donomulyo, malang",
+        "value": "350701"
+    },
+    {
+        "label": "Pagak, malang",
+        "value": "350702"
+    },
+    {
+        "label": "Bantur, malang",
+        "value": "350703"
+    },
+    {
+        "label": "Sumbermanjing Wetan, malang",
+        "value": "350704"
+    },
+    {
+        "label": "Dampit, malang",
+        "value": "350705"
+    },
+    {
+        "label": "Ampelgading, malang",
+        "value": "350706"
+    },
+    {
+        "label": "Poncokusumo, malang",
+        "value": "350707"
+    },
+    {
+        "label": "Wajak, malang",
+        "value": "350708"
+    },
+    {
+        "label": "Turen, malang",
+        "value": "350709"
+    },
+    {
+        "label": "Gondanglegi, malang",
+        "value": "350710"
+    },
+    {
+        "label": "Kalipare, malang",
+        "value": "350711"
+    },
+    {
+        "label": "Sumberpucung, malang",
+        "value": "350712"
+    },
+    {
+        "label": "Kepanjen, malang",
+        "value": "350713"
+    },
+    {
+        "label": "Bululawang, malang",
+        "value": "350714"
+    },
+    {
+        "label": "Tajinan, malang",
+        "value": "350715"
+    },
+    {
+        "label": "Tumpang, malang",
+        "value": "350716"
+    },
+    {
+        "label": "Jabung, malang",
+        "value": "350717"
+    },
+    {
+        "label": "Pakis, malang",
+        "value": "350718"
+    },
+    {
+        "label": "Pakisaji, malang",
+        "value": "350719"
+    },
+    {
+        "label": "Ngajum, malang",
+        "value": "350720"
+    },
+    {
+        "label": "Wagir, malang",
+        "value": "350721"
+    },
+    {
+        "label": "Dau, malang",
+        "value": "350722"
+    },
+    {
+        "label": "Karang Ploso, malang",
+        "value": "350723"
+    },
+    {
+        "label": "Singosari, malang",
+        "value": "350724"
+    },
+    {
+        "label": "Lawang, malang",
+        "value": "350725"
+    },
+    {
+        "label": "Pujon, malang",
+        "value": "350726"
+    },
+    {
+        "label": "Ngantang, malang",
+        "value": "350727"
+    },
+    {
+        "label": "Kasembon, malang",
+        "value": "350728"
+    },
+    {
+        "label": "Gedangan, malang",
+        "value": "350729"
+    },
+    {
+        "label": "Tirtoyudo, malang",
+        "value": "350730"
+    },
+    {
+        "label": "Kromengan, malang",
+        "value": "350731"
+    },
+    {
+        "label": "Wonosari, malang",
+        "value": "350732"
+    },
+    {
+        "label": "Pagelaran, malang",
+        "value": "350733"
+    },
+    {
+        "label": "Tempursari, lumajang",
+        "value": "350801"
+    },
+    {
+        "label": "Pronojiwo, lumajang",
+        "value": "350802"
+    },
+    {
+        "label": "Candipuro, lumajang",
+        "value": "350803"
+    },
+    {
+        "label": "Pasirian, lumajang",
+        "value": "350804"
+    },
+    {
+        "label": "Tempeh, lumajang",
+        "value": "350805"
+    },
+    {
+        "label": "Kunir, lumajang",
+        "value": "350806"
+    },
+    {
+        "label": "Yosowilangun, lumajang",
+        "value": "350807"
+    },
+    {
+        "label": "Rowokangkung, lumajang",
+        "value": "350808"
+    },
+    {
+        "label": "Tekung, lumajang",
+        "value": "350809"
+    },
+    {
+        "label": "Lumajang, lumajang",
+        "value": "350810"
+    },
+    {
+        "label": "Pasrujambe, lumajang",
+        "value": "350811"
+    },
+    {
+        "label": "Senduro, lumajang",
+        "value": "350812"
+    },
+    {
+        "label": "Gucialit, lumajang",
+        "value": "350813"
+    },
+    {
+        "label": "Padang, lumajang",
+        "value": "350814"
+    },
+    {
+        "label": "Sukodono, lumajang",
+        "value": "350815"
+    },
+    {
+        "label": "Kedungjajang, lumajang",
+        "value": "350816"
+    },
+    {
+        "label": "Jatiroto, lumajang",
+        "value": "350817"
+    },
+    {
+        "label": "Randuagung, lumajang",
+        "value": "350818"
+    },
+    {
+        "label": "Klakah, lumajang",
+        "value": "350819"
+    },
+    {
+        "label": "Ranuyoso, lumajang",
+        "value": "350820"
+    },
+    {
+        "label": "Sumbersuko, lumajang",
+        "value": "350821"
+    },
+    {
+        "label": "Jombang, jember",
+        "value": "350901"
+    },
+    {
+        "label": "Kencong, jember",
+        "value": "350902"
+    },
+    {
+        "label": "Sumberbaru, jember",
+        "value": "350903"
+    },
+    {
+        "label": "Gumukmas, jember",
+        "value": "350904"
+    },
+    {
+        "label": "Umbulsari, jember",
+        "value": "350905"
+    },
+    {
+        "label": "Tanggul, jember",
+        "value": "350906"
+    },
+    {
+        "label": "Semboro, jember",
+        "value": "350907"
+    },
+    {
+        "label": "Puger, jember",
+        "value": "350908"
+    },
+    {
+        "label": "Bangsalsari, jember",
+        "value": "350909"
+    },
+    {
+        "label": "Balung, jember",
+        "value": "350910"
+    },
+    {
+        "label": "Wuluhan, jember",
+        "value": "350911"
+    },
+    {
+        "label": "Ambulu, jember",
+        "value": "350912"
+    },
+    {
+        "label": "Rambipuji, jember",
+        "value": "350913"
+    },
+    {
+        "label": "Panti, jember",
+        "value": "350914"
+    },
+    {
+        "label": "Sukorambi, jember",
+        "value": "350915"
+    },
+    {
+        "label": "Jenggawah, jember",
+        "value": "350916"
+    },
+    {
+        "label": "Ajung, jember",
+        "value": "350917"
+    },
+    {
+        "label": "Tempurejo, jember",
+        "value": "350918"
+    },
+    {
+        "label": "Kaliwates, jember",
+        "value": "350919"
+    },
+    {
+        "label": "Patrang, jember",
+        "value": "350920"
+    },
+    {
+        "label": "Sumbersari, jember",
+        "value": "350921"
+    },
+    {
+        "label": "Arjasa, jember",
+        "value": "350922"
+    },
+    {
+        "label": "Mumbulsari, jember",
+        "value": "350923"
+    },
+    {
+        "label": "Pakusari, jember",
+        "value": "350924"
+    },
+    {
+        "label": "Jelbuk, jember",
+        "value": "350925"
+    },
+    {
+        "label": "Mayang, jember",
+        "value": "350926"
+    },
+    {
+        "label": "Kalisat, jember",
+        "value": "350927"
+    },
+    {
+        "label": "Ledokombo, jember",
+        "value": "350928"
+    },
+    {
+        "label": "Sukowono, jember",
+        "value": "350929"
+    },
+    {
+        "label": "Silo, jember",
+        "value": "350930"
+    },
+    {
+        "label": "Sumberjambe, jember",
+        "value": "350931"
+    },
+    {
+        "label": "Pesanggaran, banyuwangi",
+        "value": "351001"
+    },
+    {
+        "label": "Bangorejo, banyuwangi",
+        "value": "351002"
+    },
+    {
+        "label": "Purwoharjo, banyuwangi",
+        "value": "351003"
+    },
+    {
+        "label": "Tegaldlimo, banyuwangi",
+        "value": "351004"
+    },
+    {
+        "label": "Muncar, banyuwangi",
+        "value": "351005"
+    },
+    {
+        "label": "Cluring, banyuwangi",
+        "value": "351006"
+    },
+    {
+        "label": "Gambiran, banyuwangi",
+        "value": "351007"
+    },
+    {
+        "label": "Srono, banyuwangi",
+        "value": "351008"
+    },
+    {
+        "label": "Genteng, banyuwangi",
+        "value": "351009"
+    },
+    {
+        "label": "Glenmore, banyuwangi",
+        "value": "351010"
+    },
+    {
+        "label": "Kalibaru, banyuwangi",
+        "value": "351011"
+    },
+    {
+        "label": "Singojuruh, banyuwangi",
+        "value": "351012"
+    },
+    {
+        "label": "Rogojampi, banyuwangi",
+        "value": "351013"
+    },
+    {
+        "label": "Kabat, banyuwangi",
+        "value": "351014"
+    },
+    {
+        "label": "Glagah, banyuwangi",
+        "value": "351015"
+    },
+    {
+        "label": "Banyuwangi, banyuwangi",
+        "value": "351016"
+    },
+    {
+        "label": "Giri, banyuwangi",
+        "value": "351017"
+    },
+    {
+        "label": "Wongsorejo, banyuwangi",
+        "value": "351018"
+    },
+    {
+        "label": "Songgon, banyuwangi",
+        "value": "351019"
+    },
+    {
+        "label": "Sempu, banyuwangi",
+        "value": "351020"
+    },
+    {
+        "label": "Kalipuro, banyuwangi",
+        "value": "351021"
+    },
+    {
+        "label": "Siliragung, banyuwangi",
+        "value": "351022"
+    },
+    {
+        "label": "Tegalsari, banyuwangi",
+        "value": "351023"
+    },
+    {
+        "label": "Licin, banyuwangi",
+        "value": "351024"
+    },
+    {
+        "label": "Blimbingsari, banyuwangi",
+        "value": "351025"
+    },
+    {
+        "label": "Maesan, bondowoso",
+        "value": "351101"
+    },
+    {
+        "label": "Tamanan, bondowoso",
+        "value": "351102"
+    },
+    {
+        "label": "Tlogosari, bondowoso",
+        "value": "351103"
+    },
+    {
+        "label": "Sukosari, bondowoso",
+        "value": "351104"
+    },
+    {
+        "label": "Pujer, bondowoso",
+        "value": "351105"
+    },
+    {
+        "label": "Grujugan, bondowoso",
+        "value": "351106"
+    },
+    {
+        "label": "Curahdami, bondowoso",
+        "value": "351107"
+    },
+    {
+        "label": "Tenggarang, bondowoso",
+        "value": "351108"
+    },
+    {
+        "label": "Wonosari, bondowoso",
+        "value": "351109"
+    },
+    {
+        "label": "Tapen, bondowoso",
+        "value": "351110"
+    },
+    {
+        "label": "Bondowoso, bondowoso",
+        "value": "351111"
+    },
+    {
+        "label": "Wringin, bondowoso",
+        "value": "351112"
+    },
+    {
+        "label": "Tegalampel, bondowoso",
+        "value": "351113"
+    },
+    {
+        "label": "Klabang, bondowoso",
+        "value": "351114"
+    },
+    {
+        "label": "Cermee, bondowoso",
+        "value": "351115"
+    },
+    {
+        "label": "Prajekan, bondowoso",
+        "value": "351116"
+    },
+    {
+        "label": "Pakem, bondowoso",
+        "value": "351117"
+    },
+    {
+        "label": "Sumberwringin, bondowoso",
+        "value": "351118"
+    },
+    {
+        "label": "Sempol, bondowoso",
+        "value": "351119"
+    },
+    {
+        "label": "Binakal, bondowoso",
+        "value": "351120"
+    },
+    {
+        "label": "Taman Krocok, bondowoso",
+        "value": "351121"
+    },
+    {
+        "label": "Botolinggo, bondowoso",
+        "value": "351122"
+    },
+    {
+        "label": "Jambesari Darus Sholah, bondowoso",
+        "value": "351123"
+    },
+    {
+        "label": "Jatibanteng, situbondo",
+        "value": "351201"
+    },
+    {
+        "label": "Besuki, situbondo",
+        "value": "351202"
+    },
+    {
+        "label": "Suboh, situbondo",
+        "value": "351203"
+    },
+    {
+        "label": "Mlandingan, situbondo",
+        "value": "351204"
+    },
+    {
+        "label": "Kendit, situbondo",
+        "value": "351205"
+    },
+    {
+        "label": "Panarukan, situbondo",
+        "value": "351206"
+    },
+    {
+        "label": "Situbondo, situbondo",
+        "value": "351207"
+    },
+    {
+        "label": "Panji, situbondo",
+        "value": "351208"
+    },
+    {
+        "label": "Mangaran, situbondo",
+        "value": "351209"
+    },
+    {
+        "label": "Kapongan, situbondo",
+        "value": "351210"
+    },
+    {
+        "label": "Arjasa, situbondo",
+        "value": "351211"
+    },
+    {
+        "label": "Jangkar, situbondo",
+        "value": "351212"
+    },
+    {
+        "label": "Asembagus, situbondo",
+        "value": "351213"
+    },
+    {
+        "label": "Banyuputih, situbondo",
+        "value": "351214"
+    },
+    {
+        "label": "Sumbermalang, situbondo",
+        "value": "351215"
+    },
+    {
+        "label": "Banyuglugur, situbondo",
+        "value": "351216"
+    },
+    {
+        "label": "Bungatan, situbondo",
+        "value": "351217"
+    },
+    {
+        "label": "Sukapura, probolinggo",
+        "value": "351301"
+    },
+    {
+        "label": "Sumber, probolinggo",
+        "value": "351302"
+    },
+    {
+        "label": "Kuripan, probolinggo",
+        "value": "351303"
+    },
+    {
+        "label": "Bantaran, probolinggo",
+        "value": "351304"
+    },
+    {
+        "label": "Leces, probolinggo",
+        "value": "351305"
+    },
+    {
+        "label": "Banyuanyar, probolinggo",
+        "value": "351306"
+    },
+    {
+        "label": "Tiris, probolinggo",
+        "value": "351307"
+    },
+    {
+        "label": "Krucil, probolinggo",
+        "value": "351308"
+    },
+    {
+        "label": "Gading, probolinggo",
+        "value": "351309"
+    },
+    {
+        "label": "Pakuniran, probolinggo",
+        "value": "351310"
+    },
+    {
+        "label": "Kotaanyar, probolinggo",
+        "value": "351311"
+    },
+    {
+        "label": "Paiton, probolinggo",
+        "value": "351312"
+    },
+    {
+        "label": "Besuk, probolinggo",
+        "value": "351313"
+    },
+    {
+        "label": "Kraksaan, probolinggo",
+        "value": "351314"
+    },
+    {
+        "label": "Krejengan, probolinggo",
+        "value": "351315"
+    },
+    {
+        "label": "Pejarakan, probolinggo",
+        "value": "351316"
+    },
+    {
+        "label": "Maron, probolinggo",
+        "value": "351317"
+    },
+    {
+        "label": "Gending, probolinggo",
+        "value": "351318"
+    },
+    {
+        "label": "Dringu, probolinggo",
+        "value": "351319"
+    },
+    {
+        "label": "Tegalsiwalan, probolinggo",
+        "value": "351320"
+    },
+    {
+        "label": "Sumberasih, probolinggo",
+        "value": "351321"
+    },
+    {
+        "label": "Wonomerto, probolinggo",
+        "value": "351322"
+    },
+    {
+        "label": "Tongas, probolinggo",
+        "value": "351323"
+    },
+    {
+        "label": "Lumbang, probolinggo",
+        "value": "351324"
+    },
+    {
+        "label": "Purwodadi, pasuruan",
+        "value": "351401"
+    },
+    {
+        "label": "Tutur, pasuruan",
+        "value": "351402"
+    },
+    {
+        "label": "Puspo, pasuruan",
+        "value": "351403"
+    },
+    {
+        "label": "Lumbang, pasuruan",
+        "value": "351404"
+    },
+    {
+        "label": "Pasrepan, pasuruan",
+        "value": "351405"
+    },
+    {
+        "label": "Kejayan, pasuruan",
+        "value": "351406"
+    },
+    {
+        "label": "Wonorejo, pasuruan",
+        "value": "351407"
+    },
+    {
+        "label": "Purwosari, pasuruan",
+        "value": "351408"
+    },
+    {
+        "label": "Sukorejo, pasuruan",
+        "value": "351409"
+    },
+    {
+        "label": "Prigen, pasuruan",
+        "value": "351410"
+    },
+    {
+        "label": "Pandaan, pasuruan",
+        "value": "351411"
+    },
+    {
+        "label": "Gempol, pasuruan",
+        "value": "351412"
+    },
+    {
+        "label": "Beji, pasuruan",
+        "value": "351413"
+    },
+    {
+        "label": "Bangil, pasuruan",
+        "value": "351414"
+    },
+    {
+        "label": "Rembang, pasuruan",
+        "value": "351415"
+    },
+    {
+        "label": "Kraton, pasuruan",
+        "value": "351416"
+    },
+    {
+        "label": "Pohjentrek, pasuruan",
+        "value": "351417"
+    },
+    {
+        "label": "Gondangwetan, pasuruan",
+        "value": "351418"
+    },
+    {
+        "label": "Winongan, pasuruan",
+        "value": "351419"
+    },
+    {
+        "label": "Grati, pasuruan",
+        "value": "351420"
+    },
+    {
+        "label": "Nguling, pasuruan",
+        "value": "351421"
+    },
+    {
+        "label": "Lekok, pasuruan",
+        "value": "351422"
+    },
+    {
+        "label": "Rejoso, pasuruan",
+        "value": "351423"
+    },
+    {
+        "label": "Tosari, pasuruan",
+        "value": "351424"
+    },
+    {
+        "label": "Tarik, sidoarjo",
+        "value": "351501"
+    },
+    {
+        "label": "Prambon, sidoarjo",
+        "value": "351502"
+    },
+    {
+        "label": "Krembung, sidoarjo",
+        "value": "351503"
+    },
+    {
+        "label": "Porong, sidoarjo",
+        "value": "351504"
+    },
+    {
+        "label": "Jabon, sidoarjo",
+        "value": "351505"
+    },
+    {
+        "label": "Tanggulangin, sidoarjo",
+        "value": "351506"
+    },
+    {
+        "label": "Candi, sidoarjo",
+        "value": "351507"
+    },
+    {
+        "label": "Sidoarjo, sidoarjo",
+        "value": "351508"
+    },
+    {
+        "label": "Tulangan, sidoarjo",
+        "value": "351509"
+    },
+    {
+        "label": "Wonoayu, sidoarjo",
+        "value": "351510"
+    },
+    {
+        "label": "Krian, sidoarjo",
+        "value": "351511"
+    },
+    {
+        "label": "Balongbendo, sidoarjo",
+        "value": "351512"
+    },
+    {
+        "label": "Taman, sidoarjo",
+        "value": "351513"
+    },
+    {
+        "label": "Sukodono, sidoarjo",
+        "value": "351514"
+    },
+    {
+        "label": "Buduran, sidoarjo",
+        "value": "351515"
+    },
+    {
+        "label": "Gedangan, sidoarjo",
+        "value": "351516"
+    },
+    {
+        "label": "Sedati, sidoarjo",
+        "value": "351517"
+    },
+    {
+        "label": "Waru, sidoarjo",
+        "value": "351518"
+    },
+    {
+        "label": "Jatirejo, mojokerto",
+        "value": "351601"
+    },
+    {
+        "label": "Gondang, mojokerto",
+        "value": "351602"
+    },
+    {
+        "label": "Pacet, mojokerto",
+        "value": "351603"
+    },
+    {
+        "label": "Trawas, mojokerto",
+        "value": "351604"
+    },
+    {
+        "label": "Ngoro, mojokerto",
+        "value": "351605"
+    },
+    {
+        "label": "Pungging, mojokerto",
+        "value": "351606"
+    },
+    {
+        "label": "Kutorejo, mojokerto",
+        "value": "351607"
+    },
+    {
+        "label": "Mojosari, mojokerto",
+        "value": "351608"
+    },
+    {
+        "label": "Dlanggu, mojokerto",
+        "value": "351609"
+    },
+    {
+        "label": "Bangsal, mojokerto",
+        "value": "351610"
+    },
+    {
+        "label": "Puri, mojokerto",
+        "value": "351611"
+    },
+    {
+        "label": "Trowulan, mojokerto",
+        "value": "351612"
+    },
+    {
+        "label": "Sooko, mojokerto",
+        "value": "351613"
+    },
+    {
+        "label": "Gedeg, mojokerto",
+        "value": "351614"
+    },
+    {
+        "label": "Kemlagi, mojokerto",
+        "value": "351615"
+    },
+    {
+        "label": "Jetis, mojokerto",
+        "value": "351616"
+    },
+    {
+        "label": "Dawarblandong, mojokerto",
+        "value": "351617"
+    },
+    {
+        "label": "Mojoanyar, mojokerto",
+        "value": "351618"
+    },
+    {
+        "label": "Perak, jombang",
+        "value": "351701"
+    },
+    {
+        "label": "Gudo, jombang",
+        "value": "351702"
+    },
+    {
+        "label": "Ngoro, jombang",
+        "value": "351703"
+    },
+    {
+        "label": "Bareng, jombang",
+        "value": "351704"
+    },
+    {
+        "label": "Wonosalam, jombang",
+        "value": "351705"
+    },
+    {
+        "label": "Mojoagung, jombang",
+        "value": "351706"
+    },
+    {
+        "label": "Mojowarno, jombang",
+        "value": "351707"
+    },
+    {
+        "label": "Diwek, jombang",
+        "value": "351708"
+    },
+    {
+        "label": "Jombang, jombang",
+        "value": "351709"
+    },
+    {
+        "label": "Peterongan, jombang",
+        "value": "351710"
+    },
+    {
+        "label": "Sumobito, jombang",
+        "value": "351711"
+    },
+    {
+        "label": "Kesamben, jombang",
+        "value": "351712"
+    },
+    {
+        "label": "Tembelang, jombang",
+        "value": "351713"
+    },
+    {
+        "label": "Ploso, jombang",
+        "value": "351714"
+    },
+    {
+        "label": "Plandaan, jombang",
+        "value": "351715"
+    },
+    {
+        "label": "Kabuh, jombang",
+        "value": "351716"
+    },
+    {
+        "label": "Kudu, jombang",
+        "value": "351717"
+    },
+    {
+        "label": "Bandarkedungmulyo, jombang",
+        "value": "351718"
+    },
+    {
+        "label": "Jogoroto, jombang",
+        "value": "351719"
+    },
+    {
+        "label": "Megaluh, jombang",
+        "value": "351720"
+    },
+    {
+        "label": "Ngusikan, jombang",
+        "value": "351721"
+    },
+    {
+        "label": "Sawahan, nganjuk",
+        "value": "351801"
+    },
+    {
+        "label": "Ngetos, nganjuk",
+        "value": "351802"
+    },
+    {
+        "label": "Berbek, nganjuk",
+        "value": "351803"
+    },
+    {
+        "label": "Loceret, nganjuk",
+        "value": "351804"
+    },
+    {
+        "label": "Pace, nganjuk",
+        "value": "351805"
+    },
+    {
+        "label": "Prambon, nganjuk",
+        "value": "351806"
+    },
+    {
+        "label": "Ngronggot, nganjuk",
+        "value": "351807"
+    },
+    {
+        "label": "Kertosono, nganjuk",
+        "value": "351808"
+    },
+    {
+        "label": "Patianrowo, nganjuk",
+        "value": "351809"
+    },
+    {
+        "label": "Baron, nganjuk",
+        "value": "351810"
+    },
+    {
+        "label": "Tanjunganom, nganjuk",
+        "value": "351811"
+    },
+    {
+        "label": "Sukomoro, nganjuk",
+        "value": "351812"
+    },
+    {
+        "label": "Nganjuk, nganjuk",
+        "value": "351813"
+    },
+    {
+        "label": "Bagor, nganjuk",
+        "value": "351814"
+    },
+    {
+        "label": "Wilangan, nganjuk",
+        "value": "351815"
+    },
+    {
+        "label": "Rejoso, nganjuk",
+        "value": "351816"
+    },
+    {
+        "label": "Gondang, nganjuk",
+        "value": "351817"
+    },
+    {
+        "label": "Ngluyu, nganjuk",
+        "value": "351818"
+    },
+    {
+        "label": "Lengkong, nganjuk",
+        "value": "351819"
+    },
+    {
+        "label": "Jatikalen, nganjuk",
+        "value": "351820"
+    },
+    {
+        "label": "Kebonsari, madiun",
+        "value": "351901"
+    },
+    {
+        "label": "Dolopo, madiun",
+        "value": "351902"
+    },
+    {
+        "label": "Geger, madiun",
+        "value": "351903"
+    },
+    {
+        "label": "Dagangan, madiun",
+        "value": "351904"
+    },
+    {
+        "label": "Kare, madiun",
+        "value": "351905"
+    },
+    {
+        "label": "Gemarang, madiun",
+        "value": "351906"
+    },
+    {
+        "label": "Wungu, madiun",
+        "value": "351907"
+    },
+    {
+        "label": "Madiun, madiun",
+        "value": "351908"
+    },
+    {
+        "label": "Jiwan, madiun",
+        "value": "351909"
+    },
+    {
+        "label": "Balerejo, madiun",
+        "value": "351910"
+    },
+    {
+        "label": "Mejayan, madiun",
+        "value": "351911"
+    },
+    {
+        "label": "Saradan, madiun",
+        "value": "351912"
+    },
+    {
+        "label": "Pilangkenceng, madiun",
+        "value": "351913"
+    },
+    {
+        "label": "Sawahan, madiun",
+        "value": "351914"
+    },
+    {
+        "label": "Wonoasri, madiun",
+        "value": "351915"
+    },
+    {
+        "label": "Poncol, magetan",
+        "value": "352001"
+    },
+    {
+        "label": "Parang, magetan",
+        "value": "352002"
+    },
+    {
+        "label": "Lembeyan, magetan",
+        "value": "352003"
+    },
+    {
+        "label": "Takeran, magetan",
+        "value": "352004"
+    },
+    {
+        "label": "Kawedanan, magetan",
+        "value": "352005"
+    },
+    {
+        "label": "Magetan, magetan",
+        "value": "352006"
+    },
+    {
+        "label": "Plaosan, magetan",
+        "value": "352007"
+    },
+    {
+        "label": "Panekan, magetan",
+        "value": "352008"
+    },
+    {
+        "label": "Sukomoro, magetan",
+        "value": "352009"
+    },
+    {
+        "label": "Bendo, magetan",
+        "value": "352010"
+    },
+    {
+        "label": "Maospati, magetan",
+        "value": "352011"
+    },
+    {
+        "label": "Barat, magetan",
+        "value": "352012"
+    },
+    {
+        "label": "Karangrejo, magetan",
+        "value": "352013"
+    },
+    {
+        "label": "Karas, magetan",
+        "value": "352014"
+    },
+    {
+        "label": "Kartoharjo, magetan",
+        "value": "352015"
+    },
+    {
+        "label": "Ngariboyo, magetan",
+        "value": "352016"
+    },
+    {
+        "label": "Nguntoronadi, magetan",
+        "value": "352017"
+    },
+    {
+        "label": "Sidorejo, magetan",
+        "value": "352018"
+    },
+    {
+        "label": "Sine, ngawi",
+        "value": "352101"
+    },
+    {
+        "label": "Ngrambe, ngawi",
+        "value": "352102"
+    },
+    {
+        "label": "Jogorogo, ngawi",
+        "value": "352103"
+    },
+    {
+        "label": "Kendal, ngawi",
+        "value": "352104"
+    },
+    {
+        "label": "Geneng, ngawi",
+        "value": "352105"
+    },
+    {
+        "label": "Kwadungan, ngawi",
+        "value": "352106"
+    },
+    {
+        "label": "Karangjati, ngawi",
+        "value": "352107"
+    },
+    {
+        "label": "Padas, ngawi",
+        "value": "352108"
+    },
+    {
+        "label": "Ngawi, ngawi",
+        "value": "352109"
+    },
+    {
+        "label": "Paron, ngawi",
+        "value": "352110"
+    },
+    {
+        "label": "Kedunggalar, ngawi",
+        "value": "352111"
+    },
+    {
+        "label": "Widodaren, ngawi",
+        "value": "352112"
+    },
+    {
+        "label": "Mantingan, ngawi",
+        "value": "352113"
+    },
+    {
+        "label": "Pangkur, ngawi",
+        "value": "352114"
+    },
+    {
+        "label": "Bringin, ngawi",
+        "value": "352115"
+    },
+    {
+        "label": "Pitu, ngawi",
+        "value": "352116"
+    },
+    {
+        "label": "Karanganyar, ngawi",
+        "value": "352117"
+    },
+    {
+        "label": "Gerih, ngawi",
+        "value": "352118"
+    },
+    {
+        "label": "Kasreman, ngawi",
+        "value": "352119"
+    },
+    {
+        "label": "Ngraho, bojonegoro",
+        "value": "352201"
+    },
+    {
+        "label": "Tambakrejo, bojonegoro",
+        "value": "352202"
+    },
+    {
+        "label": "Ngambon, bojonegoro",
+        "value": "352203"
+    },
+    {
+        "label": "Ngasem, bojonegoro",
+        "value": "352204"
+    },
+    {
+        "label": "Bubulan, bojonegoro",
+        "value": "352205"
+    },
+    {
+        "label": "Dander, bojonegoro",
+        "value": "352206"
+    },
+    {
+        "label": "Sugihwaras, bojonegoro",
+        "value": "352207"
+    },
+    {
+        "label": "Kedungadem, bojonegoro",
+        "value": "352208"
+    },
+    {
+        "label": "Kepohbaru, bojonegoro",
+        "value": "352209"
+    },
+    {
+        "label": "Baureno, bojonegoro",
+        "value": "352210"
+    },
+    {
+        "label": "Kanor, bojonegoro",
+        "value": "352211"
+    },
+    {
+        "label": "Sumberejo, bojonegoro",
+        "value": "352212"
+    },
+    {
+        "label": "Balen, bojonegoro",
+        "value": "352213"
+    },
+    {
+        "label": "Kapas, bojonegoro",
+        "value": "352214"
+    },
+    {
+        "label": "Bojonegoro, bojonegoro",
+        "value": "352215"
+    },
+    {
+        "label": "Kalitidu, bojonegoro",
+        "value": "352216"
+    },
+    {
+        "label": "Malo, bojonegoro",
+        "value": "352217"
+    },
+    {
+        "label": "Purwosari, bojonegoro",
+        "value": "352218"
+    },
+    {
+        "label": "Padangan, bojonegoro",
+        "value": "352219"
+    },
+    {
+        "label": "Kasiman, bojonegoro",
+        "value": "352220"
+    },
+    {
+        "label": "Temayang, bojonegoro",
+        "value": "352221"
+    },
+    {
+        "label": "Margomulyo, bojonegoro",
+        "value": "352222"
+    },
+    {
+        "label": "Trucuk, bojonegoro",
+        "value": "352223"
+    },
+    {
+        "label": "Sukosewu, bojonegoro",
+        "value": "352224"
+    },
+    {
+        "label": "Kedewan, bojonegoro",
+        "value": "352225"
+    },
+    {
+        "label": "Gondang, bojonegoro",
+        "value": "352226"
+    },
+    {
+        "label": "Sekar, bojonegoro",
+        "value": "352227"
+    },
+    {
+        "label": "Gayam, bojonegoro",
+        "value": "352228"
+    },
+    {
+        "label": "Kenduruan, tuban",
+        "value": "352301"
+    },
+    {
+        "label": "Jatirogo, tuban",
+        "value": "352302"
+    },
+    {
+        "label": "Bangilan, tuban",
+        "value": "352303"
+    },
+    {
+        "label": "Bancar, tuban",
+        "value": "352304"
+    },
+    {
+        "label": "Senori, tuban",
+        "value": "352305"
+    },
+    {
+        "label": "Tambakboyo, tuban",
+        "value": "352306"
+    },
+    {
+        "label": "Singgahan, tuban",
+        "value": "352307"
+    },
+    {
+        "label": "Kerek, tuban",
+        "value": "352308"
+    },
+    {
+        "label": "Parengan, tuban",
+        "value": "352309"
+    },
+    {
+        "label": "Montong, tuban",
+        "value": "352310"
+    },
+    {
+        "label": "Soko, tuban",
+        "value": "352311"
+    },
+    {
+        "label": "Jenu, tuban",
+        "value": "352312"
+    },
+    {
+        "label": "Merakurak, tuban",
+        "value": "352313"
+    },
+    {
+        "label": "Rengel, tuban",
+        "value": "352314"
+    },
+    {
+        "label": "Semanding, tuban",
+        "value": "352315"
+    },
+    {
+        "label": "Tuban, tuban",
+        "value": "352316"
+    },
+    {
+        "label": "Plumpang, tuban",
+        "value": "352317"
+    },
+    {
+        "label": "Palang, tuban",
+        "value": "352318"
+    },
+    {
+        "label": "Widang, tuban",
+        "value": "352319"
+    },
+    {
+        "label": "Grabagan, tuban",
+        "value": "352320"
+    },
+    {
+        "label": "Sukorame, lamongan",
+        "value": "352401"
+    },
+    {
+        "label": "Bluluk, lamongan",
+        "value": "352402"
+    },
+    {
+        "label": "Modo, lamongan",
+        "value": "352403"
+    },
+    {
+        "label": "Ngimbang, lamongan",
+        "value": "352404"
+    },
+    {
+        "label": "Babat, lamongan",
+        "value": "352405"
+    },
+    {
+        "label": "Kedungpring, lamongan",
+        "value": "352406"
+    },
+    {
+        "label": "Brondong, lamongan",
+        "value": "352407"
+    },
+    {
+        "label": "Laren, lamongan",
+        "value": "352408"
+    },
+    {
+        "label": "Sekaran, lamongan",
+        "value": "352409"
+    },
+    {
+        "label": "Maduran, lamongan",
+        "value": "352410"
+    },
+    {
+        "label": "Sambeng, lamongan",
+        "value": "352411"
+    },
+    {
+        "label": "Sugio, lamongan",
+        "value": "352412"
+    },
+    {
+        "label": "Pucuk, lamongan",
+        "value": "352413"
+    },
+    {
+        "label": "Paciran, lamongan",
+        "value": "352414"
+    },
+    {
+        "label": "Solokuro, lamongan",
+        "value": "352415"
+    },
+    {
+        "label": "Mantup, lamongan",
+        "value": "352416"
+    },
+    {
+        "label": "Sukodadi, lamongan",
+        "value": "352417"
+    },
+    {
+        "label": "Karanggeneng, lamongan",
+        "value": "352418"
+    },
+    {
+        "label": "Kembangbahu, lamongan",
+        "value": "352419"
+    },
+    {
+        "label": "Kalitengah, lamongan",
+        "value": "352420"
+    },
+    {
+        "label": "Turi, lamongan",
+        "value": "352421"
+    },
+    {
+        "label": "Lamongan, lamongan",
+        "value": "352422"
+    },
+    {
+        "label": "Tikung, lamongan",
+        "value": "352423"
+    },
+    {
+        "label": "Karangbinangun, lamongan",
+        "value": "352424"
+    },
+    {
+        "label": "Deket, lamongan",
+        "value": "352425"
+    },
+    {
+        "label": "Glagah, lamongan",
+        "value": "352426"
+    },
+    {
+        "label": "Sarirejo, lamongan",
+        "value": "352427"
+    },
+    {
+        "label": "Dukun, gresik",
+        "value": "352501"
+    },
+    {
+        "label": "Balongpanggang, gresik",
+        "value": "352502"
+    },
+    {
+        "label": "Panceng, gresik",
+        "value": "352503"
+    },
+    {
+        "label": "Benjeng, gresik",
+        "value": "352504"
+    },
+    {
+        "label": "Duduksampeyan, gresik",
+        "value": "352505"
+    },
+    {
+        "label": "Wringinanom, gresik",
+        "value": "352506"
+    },
+    {
+        "label": "Ujungpangkah, gresik",
+        "value": "352507"
+    },
+    {
+        "label": "Kedamean, gresik",
+        "value": "352508"
+    },
+    {
+        "label": "Sidayu, gresik",
+        "value": "352509"
+    },
+    {
+        "label": "Manyar, gresik",
+        "value": "352510"
+    },
+    {
+        "label": "Cerme, gresik",
+        "value": "352511"
+    },
+    {
+        "label": "Bungah, gresik",
+        "value": "352512"
+    },
+    {
+        "label": "Menganti, gresik",
+        "value": "352513"
+    },
+    {
+        "label": "Kebomas, gresik",
+        "value": "352514"
+    },
+    {
+        "label": "Driyorejo, gresik",
+        "value": "352515"
+    },
+    {
+        "label": "Gresik, gresik",
+        "value": "352516"
+    },
+    {
+        "label": "Sangkapura, gresik",
+        "value": "352517"
+    },
+    {
+        "label": "Tambak, gresik",
+        "value": "352518"
+    },
+    {
+        "label": "Bangkalan, bangkalan",
+        "value": "352601"
+    },
+    {
+        "label": "Socah, bangkalan",
+        "value": "352602"
+    },
+    {
+        "label": "Burneh, bangkalan",
+        "value": "352603"
+    },
+    {
+        "label": "Kamal, bangkalan",
+        "value": "352604"
+    },
+    {
+        "label": "Arosbaya, bangkalan",
+        "value": "352605"
+    },
+    {
+        "label": "Geger, bangkalan",
+        "value": "352606"
+    },
+    {
+        "label": "Klampis, bangkalan",
+        "value": "352607"
+    },
+    {
+        "label": "Sepulu, bangkalan",
+        "value": "352608"
+    },
+    {
+        "label": "Tanjung Bumi, bangkalan",
+        "value": "352609"
+    },
+    {
+        "label": "Kokop, bangkalan",
+        "value": "352610"
+    },
+    {
+        "label": "Kwanyar, bangkalan",
+        "value": "352611"
+    },
+    {
+        "label": "Labang, bangkalan",
+        "value": "352612"
+    },
+    {
+        "label": "Tanah Merah, bangkalan",
+        "value": "352613"
+    },
+    {
+        "label": "Tragah, bangkalan",
+        "value": "352614"
+    },
+    {
+        "label": "Blega, bangkalan",
+        "value": "352615"
+    },
+    {
+        "label": "Modung, bangkalan",
+        "value": "352616"
+    },
+    {
+        "label": "Konang, bangkalan",
+        "value": "352617"
+    },
+    {
+        "label": "Galis, bangkalan",
+        "value": "352618"
+    },
+    {
+        "label": "Sreseh, sampang",
+        "value": "352701"
+    },
+    {
+        "label": "Torjun, sampang",
+        "value": "352702"
+    },
+    {
+        "label": "Sampang, sampang",
+        "value": "352703"
+    },
+    {
+        "label": "Camplong, sampang",
+        "value": "352704"
+    },
+    {
+        "label": "Omben, sampang",
+        "value": "352705"
+    },
+    {
+        "label": "Kedungdung, sampang",
+        "value": "352706"
+    },
+    {
+        "label": "Jrengik, sampang",
+        "value": "352707"
+    },
+    {
+        "label": "Tambelangan, sampang",
+        "value": "352708"
+    },
+    {
+        "label": "Banyuates, sampang",
+        "value": "352709"
+    },
+    {
+        "label": "Robatal, sampang",
+        "value": "352710"
+    },
+    {
+        "label": "Sokobanah, sampang",
+        "value": "352711"
+    },
+    {
+        "label": "Ketapang, sampang",
+        "value": "352712"
+    },
+    {
+        "label": "Pangarengan, sampang",
+        "value": "352713"
+    },
+    {
+        "label": "Karangpenang, sampang",
+        "value": "352714"
+    },
+    {
+        "label": "Tlanakan, pamekasan",
+        "value": "352801"
+    },
+    {
+        "label": "Pademawu, pamekasan",
+        "value": "352802"
+    },
+    {
+        "label": "Galis, pamekasan",
+        "value": "352803"
+    },
+    {
+        "label": "Pamekasan, pamekasan",
+        "value": "352804"
+    },
+    {
+        "label": "Proppo, pamekasan",
+        "value": "352805"
+    },
+    {
+        "label": "Palenggaan, pamekasan",
+        "value": "352806"
+    },
+    {
+        "label": "Pegantenan, pamekasan",
+        "value": "352807"
+    },
+    {
+        "label": "Larangan, pamekasan",
+        "value": "352808"
+    },
+    {
+        "label": "Pakong, pamekasan",
+        "value": "352809"
+    },
+    {
+        "label": "Waru, pamekasan",
+        "value": "352810"
+    },
+    {
+        "label": "Batumarmar, pamekasan",
+        "value": "352811"
+    },
+    {
+        "label": "Kadur, pamekasan",
+        "value": "352812"
+    },
+    {
+        "label": "Pasean, pamekasan",
+        "value": "352813"
+    },
+    {
+        "label": "Kota Sumenep, sumenep",
+        "value": "352901"
+    },
+    {
+        "label": "Kalianget, sumenep",
+        "value": "352902"
+    },
+    {
+        "label": "Manding, sumenep",
+        "value": "352903"
+    },
+    {
+        "label": "Talango, sumenep",
+        "value": "352904"
+    },
+    {
+        "label": "Bluto, sumenep",
+        "value": "352905"
+    },
+    {
+        "label": "Saronggi, sumenep",
+        "value": "352906"
+    },
+    {
+        "label": "Lenteng, sumenep",
+        "value": "352907"
+    },
+    {
+        "label": "Giliginting, sumenep",
+        "value": "352908"
+    },
+    {
+        "label": "Guluk-Guluk, sumenep",
+        "value": "352909"
+    },
+    {
+        "label": "Ganding, sumenep",
+        "value": "352910"
+    },
+    {
+        "label": "Pragaan, sumenep",
+        "value": "352911"
+    },
+    {
+        "label": "Ambunten, sumenep",
+        "value": "352912"
+    },
+    {
+        "label": "Pasongsongan, sumenep",
+        "value": "352913"
+    },
+    {
+        "label": "Dasuk, sumenep",
+        "value": "352914"
+    },
+    {
+        "label": "Rubaru, sumenep",
+        "value": "352915"
+    },
+    {
+        "label": "Batang Batang, sumenep",
+        "value": "352916"
+    },
+    {
+        "label": "Batuputih, sumenep",
+        "value": "352917"
+    },
+    {
+        "label": "Dungkek, sumenep",
+        "value": "352918"
+    },
+    {
+        "label": "Gapura, sumenep",
+        "value": "352919"
+    },
+    {
+        "label": "Gayam, sumenep",
+        "value": "352920"
+    },
+    {
+        "label": "Nonggunong, sumenep",
+        "value": "352921"
+    },
+    {
+        "label": "Raas, sumenep",
+        "value": "352922"
+    },
+    {
+        "label": "Masalembu, sumenep",
+        "value": "352923"
+    },
+    {
+        "label": "Arjasa, sumenep",
+        "value": "352924"
+    },
+    {
+        "label": "Sapeken, sumenep",
+        "value": "352925"
+    },
+    {
+        "label": "Batuan, sumenep",
+        "value": "352926"
+    },
+    {
+        "label": "Kangayan, sumenep",
+        "value": "352927"
+    },
+    {
+        "label": "Mojoroto, kota kediri",
+        "value": "357101"
+    },
+    {
+        "label": "Kota, kota kediri",
+        "value": "357102"
+    },
+    {
+        "label": "Pesantren, kota kediri",
+        "value": "357103"
+    },
+    {
+        "label": "Kepanjenkidul, kota blitar",
+        "value": "357201"
+    },
+    {
+        "label": "Sukorejo, kota blitar",
+        "value": "357202"
+    },
+    {
+        "label": "Sananwetan, kota blitar",
+        "value": "357203"
+    },
+    {
+        "label": "Blimbing, kota malang",
+        "value": "357301"
+    },
+    {
+        "label": "Klojen, kota malang",
+        "value": "357302"
+    },
+    {
+        "label": "Kedungkandang, kota malang",
+        "value": "357303"
+    },
+    {
+        "label": "Sukun, kota malang",
+        "value": "357304"
+    },
+    {
+        "label": "Lowokwaru, kota malang",
+        "value": "357305"
+    },
+    {
+        "label": "Kademangan, kota probolinggo",
+        "value": "357401"
+    },
+    {
+        "label": "Wonoasih, kota probolinggo",
+        "value": "357402"
+    },
+    {
+        "label": "Mayangan, kota probolinggo",
+        "value": "357403"
+    },
+    {
+        "label": "Kanigaran, kota probolinggo",
+        "value": "357404"
+    },
+    {
+        "label": "Kedopok, kota probolinggo",
+        "value": "357405"
+    },
+    {
+        "label": "Gadingrejo, kota pasuruan",
+        "value": "357501"
+    },
+    {
+        "label": "Purworejo, kota pasuruan",
+        "value": "357502"
+    },
+    {
+        "label": "Bugul Kidul, kota pasuruan",
+        "value": "357503"
+    },
+    {
+        "label": "Panggungrejo, kota pasuruan",
+        "value": "357504"
+    },
+    {
+        "label": "Prajuritkulon, kota mojokerto",
+        "value": "357601"
+    },
+    {
+        "label": "Magersari, kota mojokerto",
+        "value": "357602"
+    },
+    {
+        "label": "Kranggan, kota mojokerto",
+        "value": "357603"
+    },
+    {
+        "label": "Kartoharjo, kota madiun",
+        "value": "357701"
+    },
+    {
+        "label": "Manguharjo, kota madiun",
+        "value": "357702"
+    },
+    {
+        "label": "Taman, kota madiun",
+        "value": "357703"
+    },
+    {
+        "label": "Karang Pilang, kota surabaya",
+        "value": "357801"
+    },
+    {
+        "label": "Wonocolo, kota surabaya",
+        "value": "357802"
+    },
+    {
+        "label": "Rungkut, kota surabaya",
+        "value": "357803"
+    },
+    {
+        "label": "Wonokromo, kota surabaya",
+        "value": "357804"
+    },
+    {
+        "label": "Tegalsari, kota surabaya",
+        "value": "357805"
+    },
+    {
+        "label": "Sawahan, kota surabaya",
+        "value": "357806"
+    },
+    {
+        "label": "Genteng, kota surabaya",
+        "value": "357807"
+    },
+    {
+        "label": "Gubeng, kota surabaya",
+        "value": "357808"
+    },
+    {
+        "label": "Sukolilo, kota surabaya",
+        "value": "357809"
+    },
+    {
+        "label": "Tambaksari, kota surabaya",
+        "value": "357810"
+    },
+    {
+        "label": "Simokerto, kota surabaya",
+        "value": "357811"
+    },
+    {
+        "label": "Pabean Cantian, kota surabaya",
+        "value": "357812"
+    },
+    {
+        "label": "Bubutan, kota surabaya",
+        "value": "357813"
+    },
+    {
+        "label": "Tandes, kota surabaya",
+        "value": "357814"
+    },
+    {
+        "label": "Krembangan, kota surabaya",
+        "value": "357815"
+    },
+    {
+        "label": "Semampir, kota surabaya",
+        "value": "357816"
+    },
+    {
+        "label": "Kenjeran, kota surabaya",
+        "value": "357817"
+    },
+    {
+        "label": "Lakarsantri, kota surabaya",
+        "value": "357818"
+    },
+    {
+        "label": "Benowo, kota surabaya",
+        "value": "357819"
+    },
+    {
+        "label": "Wiyung, kota surabaya",
+        "value": "357820"
+    },
+    {
+        "label": "Dukuh Pakis, kota surabaya",
+        "value": "357821"
+    },
+    {
+        "label": "Gayungan, kota surabaya",
+        "value": "357822"
+    },
+    {
+        "label": "Jambangan, kota surabaya",
+        "value": "357823"
+    },
+    {
+        "label": "Tenggilis Mejoyo, kota surabaya",
+        "value": "357824"
+    },
+    {
+        "label": "Gunung Anyar, kota surabaya",
+        "value": "357825"
+    },
+    {
+        "label": "Mulyorejo, kota surabaya",
+        "value": "357826"
+    },
+    {
+        "label": "Sukomanunggal, kota surabaya",
+        "value": "357827"
+    },
+    {
+        "label": "Asem Rowo, kota surabaya",
+        "value": "357828"
+    },
+    {
+        "label": "Bulak, kota surabaya",
+        "value": "357829"
+    },
+    {
+        "label": "Pakal, kota surabaya",
+        "value": "357830"
+    },
+    {
+        "label": "Sambikerep, kota surabaya",
+        "value": "357831"
+    },
+    {
+        "label": "Batu, kota batu",
+        "value": "357901"
+    },
+    {
+        "label": "Bumiaji, kota batu",
+        "value": "357902"
+    },
+    {
+        "label": "Junrejo, kota batu",
+        "value": "357903"
+    }
+]

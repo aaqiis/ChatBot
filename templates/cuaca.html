@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMKG Juanda</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/cuaca.css') }}">
+</head>
+<body>
+    <div class="chat-container" id="chatBox">
+        <div class="chat-header">
+            <div style="text-align: left;">
+                <span>🌦️ TANYA BMKG❓</span>
+                <small style="display: block; margin-top: 5px;">Melayani informasi cuaca hingga 3 hari ke depan!</small>
+            </div>
+            <button id="closeChat" style="color:white; background:none; border:none; font-size:20px; font-weight:bold; transform: scaleY(-1); cursor:pointer;">&#x21A9;</button>        
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">Halo <span id="greetingText"></span> Sobat BMKG Juanda! 🤗</div>
+            <div class="message bot-message">
+                Silahkan bertanya terkait cuaca di daerah Jawa Timur. Sertakan keterangan lokasi lengkapnya (Desa/Kecamatan/Kabupaten/Kota), keterangan waktu/tanggal {opsional}.<br>
+                Contoh:<br> 
+                1. Cuaca desa Pepe, Kecamatan Sedati besok <br>
+                2. Suhu Kota Surabaya saat ini <br>
+                3. Cuaca di Desa Ngoro, Kecamatan Ngoro, Kabupaten Mojokerto besok pukul 12.00
+            </div>
+        </div>
+        <div class="chat-footer">
+            <form action="/get_cuaca" method="post">
+                <select id="modelSelector" aria-label="Pilih model LLM">
+                    <option value="gemini">Gemini AI</option>
+                    <option value="deepseek">DeepSeek</option>
+                    <option value="gpt">GPT AI</option>
+                </select>
+                <textarea id="chat-input" name="user_input" placeholder="Tulis pesan di sini..." required></textarea>
+                <button id="send-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2 21L23 12L2 3V10L17 12L2 14V21Z" fill="white"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/cuaca.js') }}"></script>
+</body>
+</html>

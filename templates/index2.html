@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Form</title>
+    <style>
+        /* Global styles */
+        body, textarea, button, .message {
+            font-family: "Arial", sans-serif;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Floating chat button */
+        #chatButton {
+            position: fixed;
+            bottom: 50px;
+            right: 40px;
+            width: 60px;
+            height: 60px;
+            background: transparent;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            border: 2px solid #007BFF;
+        }
+
+        #chatButton img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        /* Chat room styles */
+        #chatRoom {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 320px;
+            max-width: 90%;
+            height: 550px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            display: none;
+            flex-direction: column;
+        }
+
+        #chatHeader {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        #chatHeader button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        #chatMessages {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            background-color: #f9f9f9;
+        }
+
+        .message {
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+
+        .user-message {
+            background-color: #DCF8C6;
+            align-self: flex-end;
+            text-align: right;
+            margin-left: auto;
+        }
+
+        .bot-message {
+            background-color: #d8f6f6;
+            align-self: flex-start;
+            text-align: left;
+            margin-right: auto;
+        }
+
+        .avatar {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 0 10px;
+            object-fit: cover;
+        }
+
+        #chatInput {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-top: 1px solid #ddd;
+        }
+
+        #chatInput textarea {
+            flex: 1;
+            resize: none;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        #chatInput button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #chatInput button:hover {
+            background-color: #0056b3;
+        }
+
+        #modelSelector {
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 8px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="chatButton">
+        <img src="/static/_f966facc-21a2-4c19-868c-31507e4c5386.jpeg" alt="Chat Icon">
+    </div>
+
+    <form id="chatRoom">
+        <div id="chatHeader">
+            <div class="header-content">
+                <span>✨ WeatherBae</span>
+            </div>
+            <button type="button" id="closeBtn">X</button>
+        </div>
+
+        <div id="chatMessages">
+            <div class="message bot-message">
+                Halo <span id="greeting"></span> Sobat BMKG Juanda! <span id="emoji"></span>
+            </div>
+            <div class="message bot-message">
+                Silahkan bertanya terkait cuaca di daerah Jawa Timur. Sertakan keterangan daerahnya (Desa/Kecamatan/Kabupaten/Kota), keterangan waktu/tanggal {opsional}.<br><br>
+                Contoh: kecamatan sedati besok<br><br>
+                Informasi cuaca hingga 3 hari ke depan.
+            </div>
+        </div>
+
+        <div id="chatInput">
+            <select id="modelSelector" aria-label="Pilih model LLM">
+                <option value="gemini">Gemini AI</option>
+                <option value="deepseek">DeepSeek</option>
+                <option value="gpt">GPT AI</option>
+            </select>
+            <textarea id="chat-input" placeholder="Tulis pesan di sini..." required></textarea>
+            <button id="send-btn" type="submit">Kirim</button>
+        </div>
+        
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const chatButton = document.getElementById("chatButton");
+            const chatRoom = document.getElementById("chatRoom");
+            const closeBtn = document.getElementById("closeBtn");
+            const chatInput = document.getElementById("chat-input");
+            const chatMessages = document.getElementById("chatMessages");
+            const modelSelector = document.getElementById("modelSelector");
+
+            // Toggle chat room visibility
+            chatButton.addEventListener("click", () => {
+                chatRoom.style.display = chatRoom.style.display === "flex" ? "none" : "flex";
+            });
+
+            closeBtn.addEventListener("click", () => {
+                chatRoom.style.display = "none";
+            });
+
+            // Set greeting based on time
+            const greetingElement = document.getElementById("greeting");
+            const emojiElement = document.getElementById("emoji");
+            const hours = new Date().getHours();
+
+            if (hours >= 5 && hours < 12) {
+                greetingElement.textContent = "Selamat Pagi";
+                emojiElement.textContent = "🌅";
+            } else if (hours >= 12 && hours < 15) {
+                greetingElement.textContent = "Selamat Siang";
+                emojiElement.textContent = "☀️";
+            } else if (hours >= 15 && hours < 18) {
+                greetingElement.textContent = "Selamat Sore";
+                emojiElement.textContent = "🌇";
+            } else {
+                greetingElement.textContent = "Selamat Malam";
+                emojiElement.textContent = "🌙";
+            }
+
+            // Send message logic
+            async function sendMessage() {
+                const userInput = chatInput.value.trim();
+                const selectedModel = modelSelector.value;
+            
+                if (!userInput) {
+                    alert("Pesan tidak boleh kosong!");
+                    return;
+                }
+                
+                // Tampilkan pesan pengguna
+                const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                chatMessages.innerHTML += `
+                    <div class="message user-message">
+                        ${userInput} <br><span style="font-size: 0.8em; color: gray;">${currentTime}</span>
+                    </div>
+                `;
+                chatInput.value = "";
+            
+                // Tampilkan pesan "Harap Tunggu..."
+                const loadingMessage = document.createElement("div");
+                loadingMessage.className = "message bot-message";
+                loadingMessage.textContent = "Harap Tunggu...";
+                chatMessages.appendChild(loadingMessage);
+            
+                try {
+                    // Kirim permintaan ke backend
+                    const response = await fetch(`/chat?message=${encodeURIComponent(userInput)}&model=${encodeURIComponent(selectedModel)}`);
+                    const data = await response.json();
+            
+                    chatMessages.removeChild(loadingMessage);
+            
+                    const botMessage = document.createElement("div");
+                    botMessage.className = "message bot-message";
+            
+                    if (response.ok && data.response) {
+                        const botTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                        botMessage.innerHTML = `${data.response} <br><span style="float: right; font-size: 0.8em; color: gray; margin-left: 10px;">${botTime}</span>`;
+                    } else {
+                        botMessage.textContent = "Kesalahan: Tidak ada data yang tersedia.";
+                    }
+                    chatMessages.appendChild(botMessage);
+                } catch (error) {
+                    chatMessages.removeChild(loadingMessage);
+                    chatMessages.innerHTML += `
+                        <div class="message bot-message">
+                            Error: ${error.message}<br><span style="font-size: 0.8em; color: gray;">${currentTime}</span>
+                        </div>
+                    `;
+                }
+            
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+            
+
+            // Enter key to send message
+            chatInput.addEventListener("keydown", (event) => {
+                if (event.key === "Enter" && !event.shiftKey) {
+                    event.preventDefault();
+                    sendMessage();
+                }
+            });
+
+            // Submit button to send message
+            document.getElementById("chatRoom").addEventListener("submit", (event) => {
+                event.preventDefault();
+                sendMessage();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -10,24 +10,42 @@ from config import GEMINI_API_KEY, BMKG_API_ENDPOINT
 import google.generativeai as genai
 from datetime import datetime
 
+
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 CORS(app)
 
-EXCEL_URL = "https://docs.google.com/spreadsheets/d/1UIFcLwBVUpA7Rc32YZaCYeKUSntDHIrZ/export?format=xlsx"
+EXCEL_URL = "https://docs.google.com/spreadsheets/d/1Lb3JC13xYVh9BsKLO_mt1g6t4EoHKzpd/export?format=xlsx"
 
 genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel("gemini-1.5-flash")
 
+
+def get_wilayah_code(json_file, search_text):
+    try:
+        # Membaca file JSON
+        with open(json_file, 'r', encoding='utf-8') as file:
+            data = json.load(file)
+        
+        # Looping untuk mencari kecocokan
+        for entry in data:
+            if search_text.lower() in entry["label"].lower():
+                return entry["value"]
+        
+        return None  # Jika tidak ditemukan
+
+    except Exception as e:
+        return f"Error: {str(e)}"
+    
 @app.route('/')
 def index():
     return render_template('index1.html')
 
 # Fungsi untuk memeriksa apakah pesan adalah sapaan
 def is_greeting(user_message):
-    greetings = ["halo", "hi", "hai", "selamat pagi", "selamat siang", "selamat sore", "selamat malam", "good morning", "good afternoon", "good evening", "good night"]
+    greetings = ["halo", "hi", "hai", "hy" "selamat pagi", "selamat siang", "selamat sore", "selamat malam", "good morning", "good afternoon", "good evening", "good night"]
     for greeting in greetings:
         if greeting in user_message.lower():
             return True, 'id' if 'selamat' in greeting else 'en'
@@ -48,49 +66,114 @@ def get_time_based_greeting(language='id'):
         return "Selamat malam" if language == 'id' else "Good night"
 
 # Fungsi untuk memperbaiki kesalahan ketik
-def correct_typo(city_name, city_list):
-    closest_match = difflib.get_close_matches(city_name, city_list, n=1, cutoff=0.7)
-    return closest_match[0] if closest_match else city_name
+def correct_typo(name, name_list):
+    closest_match = difflib.get_close_matches(name, name_list, n=1, cutoff=0.7)
+    return closest_match[0] if closest_match else name
 
 # Fungsi untuk mengekstrak nama wilayah dari input teks
-def extract_city_name(input_text, city_list):
-    for city in city_list:
-        if re.search(rf'\b{city}\b', input_text, re.IGNORECASE):
-            return city
+def extract_location_name(input_text, name_list):
+    for name in name_list:
+        if re.search(rf'\b{name}\b', input_text, re.IGNORECASE):
+            return name
     return None
 
-# Fungsi untuk mendapatkan kode wilayah dari file Excel dengan looping antar sheet
-def get_code(input_text):
+# Fungsi untuk mendapatkan kode wilayah berdasarkan prioritas hierarki
+def get_hierarchical_code(input_text):
     try:
         logger.info("Membaca data dari file Excel.")
-        # Membaca file Excel dari URL
         df_dict = pd.read_excel(EXCEL_URL, sheet_name=None)
 
         levels = ['Provinsi', 'KotaKabupaten', 'Kecamatan', 'Desa']
         result = {}
 
-        for level in levels:
-            if level in df_dict:
-                df = df_dict[level]
-                df.columns = ["kode", "nama"]
-                df.dropna(subset=["nama"], inplace=True)
+        if 'KotaKabupaten' not in df_dict:
+            return None, "Data Kota/Kabupaten tidak tersedia."
 
-                city_list = df["nama"].unique()
-                city_name = extract_city_name(input_text, city_list)
-                if city_name:
-                    corrected_city_name = correct_typo(city_name, city_list)
-                    if corrected_city_name != city_name:
-                        logger.info(f"Perbaikan kesalahan ketik: {city_name} -> {corrected_city_name}")
-                        city_name = corrected_city_name
+        kota_kabupaten_df = df_dict['KotaKabupaten']
+        kota_kabupaten_df.columns = ["kode", "nama"]
+        kota_kabupaten_df.dropna(subset=["nama"], inplace=True)
+        kota_kabupaten_df["nama"] = kota_kabupaten_df["nama"].astype(str)
+        
 
-                    matching_row = df[df["nama"].str.contains(city_name, case=False, na=False)]
-                    if not matching_row.empty:
-                        result[level] = {
-                            "kode": matching_row.iloc[0]["kode"],
-                            "nama": matching_row.iloc[0]["nama"]
-                        }
-                        break
+        # Wajib mencantumkan nama kabupaten/kota
+        kota_kabupaten_list = kota_kabupaten_df["nama"].unique()
+        print (kota_kabupaten_list)
+        kota_kabupaten_name = extract_location_name(input_text, kota_kabupaten_list)
+        if not kota_kabupaten_name:
+            return None, "Pesan harus mencantumkan nama kabupaten/kota."
 
+        corrected_kota_kabupaten_name = correct_typo(kota_kabupaten_name, kota_kabupaten_list)
+        if corrected_kota_kabupaten_name != kota_kabupaten_name:
+            logger.info(f"Perbaikan kesalahan ketik: {kota_kabupaten_name} -> {corrected_kota_kabupaten_name}")
+            kota_kabupaten_name = corrected_kota_kabupaten_name
+
+        matching_kota_kabupaten = kota_kabupaten_df[kota_kabupaten_df["nama"].str.contains(kota_kabupaten_name, case=False, na=False)]
+        if matching_kota_kabupaten.empty:
+            return None, "Kode untuk kabupaten/kota tidak ditemukan."
+
+        result['KotaKabupaten'] = {
+            "kode": matching_kota_kabupaten.iloc[0]["kode"],
+            "nama": matching_kota_kabupaten.iloc[0]["nama"]
+        }
+
+        # Opsional: Kecamatan
+        if 'Kecamatan' in df_dict:
+            kecamatan_df = df_dict['Kecamatan']
+            kecamatan_df.columns = ["kode", "nama"]
+            kecamatan_df.dropna(subset=["nama"], inplace=True)
+            kecamatan_df["nama"] = kecamatan_df["nama"].astype(str)
+            
+
+            kecamatan_list = kecamatan_df["nama"].unique()
+            kecamatan_name = extract_location_name(input_text, kecamatan_list)
+            if kecamatan_name:
+                corrected_kecamatan_name = correct_typo(kecamatan_name, kecamatan_list)
+                if corrected_kecamatan_name != kecamatan_name:
+                    logger.info(f"Perbaikan kesalahan ketik: {kecamatan_name} -> {corrected_kecamatan_name}")
+                    kecamatan_name = corrected_kecamatan_name
+                    
+                matching_kecamatan = kecamatan_df[kecamatan_df["nama"].str.contains(kecamatan_name, case=False, na=False)]
+            if not matching_kecamatan.empty:
+                # Verifikasi apakah kecamatan ini sesuai dengan kabupaten
+                kabupaten_code = result['KotaKabupaten']['kode']
+                if matching_kecamatan.iloc[0]["kode"].startswith(kabupaten_code):
+                    result['Kecamatan'] = {
+                        "kode": matching_kecamatan.iloc[0]["kode"],
+                        "nama": matching_kecamatan.iloc[0]["nama"]
+                    }
+
+        # Opsional: Desa
+        if 'Desa' in df_dict:
+            desa_df = df_dict['Desa']
+            desa_df.columns = ["kode", "nama"]
+            desa_df.dropna(subset=["nama"], inplace=True)
+            desa_df["nama"] = desa_df["nama"].astype(str)
+            
+
+            desa_list = desa_df["nama"].unique()
+            desa_name = extract_location_name(input_text, desa_list)
+            if desa_name:
+                corrected_desa_name = correct_typo(desa_name, desa_list)
+                if corrected_desa_name != desa_name:
+                    logger.info(f"Perbaikan kesalahan ketik: {desa_name} -> {corrected_desa_name}")
+                    desa_name = corrected_desa_name
+
+                matching_desa = desa_df[desa_df["nama"].str.contains(desa_name, case=False, na=False)]
+        if not matching_desa.empty:
+            # Verifikasi hubungan desa dengan kecamatan
+            kecamatan_code = result.get('Kecamatan', {}).get('kode', '')
+            if matching_desa.iloc[0]["kode"].startswith(kecamatan_code):
+                result['Desa'] = {
+                    "kode": matching_desa.iloc[0]["kode"],
+                    "nama": matching_desa.iloc[0]["nama"]
+                }
+
+        
+        # Menentukan kode provinsi
+        result['Provinsi'] = {
+            "kode": "35",
+            "nama": "Jawa Timur"
+        }
         if not result:
             logger.warning("Kode wilayah tidak ditemukan untuk nama wilayah ini.")
             return None, "Kode wilayah tidak ditemukan untuk nama wilayah ini."
@@ -103,7 +186,7 @@ def get_code(input_text):
         logger.error(f"Gagal membaca data dari file Excel: {str(e)}")
         return None, f"Gagal membaca data dari file Excel: {str(e)}"
 
-# Fungsi untuk membangun parameter URL BMKG
+# Fungsi untuk membangun URL BMKG
 def build_bmkg_url(code):
     segments = code.split('.')
     if len(segments) == 1:
@@ -123,15 +206,6 @@ def chat(user_message):
             logger.warning("Pesan tidak boleh kosong.")
             return jsonify({"error": "Pesan tidak boleh kosong."}), 400
         
-        # cek dahulu apakah ada nama yang sama atau tidak jika ada
-        # return ke user bahwa harus lengkap, karena ada nama yang sama.
-        # if tidak ada keterangan kabupaten / kota  
-        # return jsonify({"error": "Pesan harus mengandung nama area."}), 400
-        # kata setelah kabupaten / kota
-        # ambil katanya dan area nya
-        # gunakan area untuk levelnya misal kabupaten A (cari kode kabupaten a) 
-        # cari area lain selain yang disebutkan (kabupaten).
-        
         # Pengecekan sapaan
         is_greet, lang = is_greeting(user_message)
         if is_greet:
@@ -140,9 +214,10 @@ def chat(user_message):
             return jsonify({"response": f"{greeting}, ada yang bisa saya bantu terkait cuaca suatu daerah?" if lang == 'id'
                              else f"{greeting}, Is there anything I can help you with regarding the weather?"})
 
+
         # Dapatkan kode wilayah dari input
-        code, error = get_code(user_message)
-        if error: 
+        code, error = get_hierarchical_code(user_message)
+        if error:
             logger.warning(f"Error saat mendapatkan kode wilayah: {error}")
             return jsonify({"error": error}), 404
 
@@ -163,7 +238,7 @@ def chat(user_message):
             logger.error("Gagal membaca data dari API BMKG.")
             return jsonify({"error": "Gagal membaca data dari API BMKG"}), 500
 
-        # Buat prompt untuk model AI
+       # Buat prompt untuk model AI
         prompt = f"""
         Data cuaca dari BMKG:
         {bmkg_data}
@@ -191,6 +266,6 @@ def chat(user_message):
     except Exception as e:
         logger.error(f"Terjadi kesalahan: {str(e)}")
         return jsonify({"error": f"Terjadi kesalahan: {str(e)}"}), 500
-
-if __name__ == '__main__': 
+    
+if __name__ == '__main__':
     app.run(debug=True)
