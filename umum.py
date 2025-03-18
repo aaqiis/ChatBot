@@ -15,9 +15,18 @@ def get_response(user_message, model="gemini"):
         Pengguna meminta informasi tentang cuaca atau fenomena alam:
         {user_message}
 
+        HANYA memberikan informasi terkait cuaca dan fenomena alam dan hal apapun berkaitan dengan BMKG.
+        Jika pengguna bertanya di luar topik ini, jangan memberikan jawaban apapun, cukup balas dengan:
+        "Maaf, saya hanya dapat memberikan informasi tentang cuaca dan fenomena alam, silahkan beri pertanyaan lain😊."
+        Jika pengguna bertanya mengenai perkiraan cuaca di Jawa Timur, balas dengan:
+        "Silahkan bertanya pada bagian informasi prakiraan cuaca🤗."
+        {user_message}
+        Ingat! Jika pertanyaan ini tidak berhubungan dengan cuaca dan fenomena alam, JANGAN menjawab atau memberikan informasi lain.
         Berikan jawaban yang relevan, jelas, singkat dan informatif sesuai dengan permintaan pengguna.
         dan jangan ada bold disemua text.
         """
+        
+        print(f"[TERMINAL] Prompt sebelum dikirim ke AI:\n{prompt}")  # Menampilkan prompt di terminal
 
  # Kirim ke model yang dipilih
         if model == "gemini":

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMKG Juanda</title>
+    <link rel="website icon" type="webp" href="/static/images/BMKG.webp">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/umum.css') }}">
 </head>
 <body>
@@ -23,7 +24,7 @@
         <div class="chat-footer">
             <select id="model-select" style="padding: 5px; font-size: 14px;">
                 <option value="gemini">Gemini</option>
-                <option value="deepseek">DeepSeek</option>
+                <!--<option value="deepseek">DeepSeek</option>-->
             </select>
             <textarea id="chat-input" placeholder="Tulis pesan di sini..." required style="width: 80%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;"></textarea>
             <button id="send-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

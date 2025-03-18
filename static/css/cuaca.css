@@ -73,7 +73,7 @@ body {
     font-family: 'Poppins', sans-serif; 
     font-weight: 600;  
     letter-spacing: 0.5px;  
-    font-size: 15px;
+    font-size: 14px;
     padding: 10px;  
     margin-bottom: 8px; 
     border-radius: 12px;
@@ -136,7 +136,7 @@ body {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 25px;
-    font-size: 14px;
+    font-size: 13px;
     height: 38px;
     outline: none;
     box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);

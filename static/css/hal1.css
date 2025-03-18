@@ -41,7 +41,7 @@ body {
     display: none;
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 25px;
     width: 360px; 
     height: 550px; 
     background: linear-gradient(to right,#74b9ff, #a29bfe);
@@ -73,8 +73,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;=-]['
-    ' ]
+    gap: 10px;
     padding: 5px;
     max-height: 280px; /* Menentukan tinggi maksimum */
     overflow-y: auto; /* Scrollable jika isi terlalu panjang */

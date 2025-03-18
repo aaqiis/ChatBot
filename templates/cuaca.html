@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMKG Juanda</title>
+    <link rel="website icon" type="webp" href="/static/images/BMKG.webp">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/cuaca.css') }}">
 </head>
 <body>
@@ -11,29 +12,41 @@
         <div class="chat-header">
             <div style="text-align: left;">
                 <span>🌦️ TANYA BMKG</span>
-                <small style="display: block; margin-top: 5px;">Melayani informasi cuaca hingga 3 hari ke depan!</small>
+                <small style="display: block; margin-top: 5px;">Dapatkan informasi cuaca hingga 3 hari ke depan!</small>
             </div>
             <button id="closeChat" style="color:white; background:none; border:none; font-size:20px; font-weight:bold; transform: scaleY(-1); cursor:pointer;">&#x21A9;</button>        
         </div>
         <div class="chat-messages" id="chatMessages">
             <div class="message bot-message welcome-message">Halo <span id="greetingText"></span> Sobat BMKG Juanda! 🤗</div>
             <div class="message bot-message welcome-message">
-                Silahkan bertanya terkait cuaca di daerah Jawa Timur. Sertakan keterangan lokasi lengkapnya (Desa/Kecamatan/Kabupaten/Kota), keterangan waktu/tanggal {opsional}.<br>
-                Contoh:<br> 
+                Silakan tanyakan informasi cuaca di Jawa Timur dengan menyertakan keyword lokasi (Desa/Kecamatan/Kabupaten/Kota) serta keterangan waktu atau tanggal (opsional).<br><br>
+        
+                <strong>Pastikan format lokasi benar:</strong><br>
                 <ul>
-                    <li>Cuaca desa Pepe, Kecamatan Sedati besok</li>
+                    <li><strong>Desa</strong>: Sertakan <em>desa dan kecamatan</em> atau <em>desa dan kabupaten</em>.</li>
+                    <li><strong>Kecamatan</strong>: Sertakan <em>kecamatan dan kabupaten</em>.</li>
+                    <li>Jika hanya satu kata, pastikan itu adalah nama kabupaten atau kota yang valid.</li>
+                </ul>
+        
+                Jika terdapat kesalahan penulisan, silakan periksa kembali dan coba lagi.<br><br>
+        
+                <strong>Contoh:</strong><br>
+                <ul>
+                    <li>Cuaca Desa Pepe, Kecamatan Sedati besok</li>
                     <li>Suhu Kota Surabaya saat ini</li>
-                    <li>Cuaca di Desa Ngoro Kecamatan Ngoro Kabupaten Mojokerto besok pukul 12.00</li>
+                    <li>Cuaca di desa ngoro, kecamatan ngoro, kabupaten mojokerto besok pukul 12.00</li>
                 </ul>
             </div>
         </div>
+        
         <div class="chat-footer">
             <form action="/get_cuaca" method="post">
                 <select id="modelSelector" aria-label="Pilih model LLM">
                     <option value="gemini">Gemini AI</option>
-                    <option value="deepseek">DeepSeek</option>
-                    <option value="gpt">GPT AI</option>
-                </select>
+                     <!--<option value="deepseek">DeepSeek</option> 
+                     <option value="gpt">GPT AI</option> -->
+                    
+                </select> 
                 <textarea id="chat-input" name="user_input" placeholder="Tulis pesan di sini..." required></textarea>
                 <button id="send-btn">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

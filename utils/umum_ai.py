@@ -1,12 +1,17 @@
 # Modul yang menangani pertanyaan user menggunakan AI 
-import os
+import re
+import json
 import requests
 from logger_config import logger
 from config import GEMINI_API_KEY
 from config import DEEPSEEK_API_KEY
 
+# Fungsi untuk menghitung jumlah token
+def count_tokens(text):
+    return len(text.split())
+
 # Endpoint API Gemini
-GEMINI_API_URL = f"https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
+GEMINI_API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
 DEEPSEEK_API_URL = f"https://openrouter.ai/api/v1/chat/completions"
 
 # Headers
@@ -16,6 +21,12 @@ HEADERS = {
 
 # Fungsi untuk mengirim pesan ke API Gemini
 def send_message_to_gemini(message):
+    original_token_count = count_tokens(message)
+    
+    logger.info(f"Jumlah token yang dikirim ke AI: {original_token_count}")
+    print(f"[TERMINAL] Jumlah token yang dikirim ke AI: {original_token_count}")  # Menampilkan token di terminal
+    print(f"[TERMINAL] Prompt dikirim ke AI: {message}")  # Menampilkan prompt ke terminal
+    
     payload = {
         "contents": [
             {

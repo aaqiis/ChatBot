@@ -193,9 +193,9 @@ def is_weather_related(message):
         "radiasi balik atmosfer", "konduksi radiasi", "pemantauan efek El Nino", 
         "pemantauan efek La Nina", "interaksi aliran atmosfer regional", "osilasi termal atmosfer",
         "deteksi gradien kelembapan", "anomali suhu titik beku", "monitoring inversi termal"
+   ]
 
-
-           ]
+    keywords = [keyword.lower() for keyword in keywords]    
     message = message.lower()
     for keyword in keywords:
         if fuzz.partial_ratio(message, keyword) > 60:

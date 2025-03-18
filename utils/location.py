@@ -11,10 +11,10 @@ def getName(user_message):
     user_message = user_message.lower()
 
     user_message = re.sub(
-    r"\b(besok|lusa|hari ini|jam|nanti|siang|sore|malam|pagi|saat ini|sebentar lagi|lagi|barusan|baru saja|bentar|sering|jarang|setiap|tiap|terkadang|sekarang|"
+    r"\b(besok|lusa|hari ini|jam|nanti|siang|sore|malam|pagi|saat ini|cuaca(nya)|sebentar lagi|lagi|barusan|baru saja|bentar|sering|jarang|setiap|tiap|terkadang|sekarang|"
     r"apakah|bagaimana|seperti apa|kapan|dimana|mengapa|kenapa|sedang|itu|di|berada|ada|mungkinkah|mungkin|akan|emang|akankah|yakin(kah)?|sudah(kah)?|masih(kah)?|betul(kah)?|"
-    r"sering(kah)?|ada(kah)?|bisa(kah)?|tidak(kah)?|bener(an)?|benar|mau|agak|lumayan|terlalu|cukup|hujan|panas|mendung|cerah|berawan|gerimis|dingin|hangat|kabut|badai|"
-    r"angin|petir|suhu)\b|\d+|[^\w\s]",
+    r"sering(kah)?|ada(kah)?|bisa(kah)?|tidak(kah)?|bener(an)?|benar|mau|agak|lumayan|terlalu|cukup|hujan|panas(nya)|mendung|cerah|berawan|gerimis|dingin|hangat|kabut|badai|"
+    r"angin|petir|suhu(nya))\b|\d+|[^\w\s]",
     "",
     user_message
 )
@@ -193,6 +193,17 @@ def get_wilayah_code(json_file, wilayah, file_type=None):
             logger.error(f"Ambiguitas ditemukan: {results}")
             return None
         else:
+            # Lakukan pencarian fuzzy jika tidak ada hasil yang cocok
+            vectorizer = TfidfVectorizer()
+            labels = [entry["label"].strip().lower() for entry in data]
+            vectors = vectorizer.fit_transform(labels)
+            query_vector = vectorizer.transform([kabupaten])
+            similarities = cosine_similarity(query_vector, vectors)
+            max_similarity = max(similarities[0])
+            if max_similarity > 0.5:
+                max_index = similarities[0].argmax()
+                return data[max_index]["value"]
+
             logger.error("Kode wilayah tidak ditemukan.")
             return None
 

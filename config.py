@@ -30,5 +30,5 @@ if not GEMINI_API_KEY:
     raise ValueError("GEMINI_API_KEY tidak ditemukan! Pastikan sudah diatur di .env")
 
 genai.configure(api_key=GEMINI_API_KEY)
-gemini_model = genai.GenerativeModel("gemini-1.5-flash")
+gemini_model = genai.GenerativeModel("gemini-2.0-flash")
 

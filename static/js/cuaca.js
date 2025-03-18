@@ -54,23 +54,23 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!userInput) return;
     
         const chatMessages = document.getElementById("chatMessages");
-    
         const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+        // Tambahkan pesan user
         const userMessage = document.createElement("div");
         userMessage.className = "message user-message";
         userMessage.innerHTML = `
-    <div style="text-align: left;">${userInput}</div>
-    <div style="text-align: right; font-size: 0.8em; color: black; margin-top: 4px;">${currentTime}</div>
-`;
+            <div style="text-align: left;">${userInput}</div>
+            <div style="text-align: right; font-size: 0.8em; color: black; margin-top: 4px;">${currentTime}</div>
+        `;
         chatMessages.appendChild(userMessage);
-    
         chatInput.value = "";
-    
+
+        // Tambahkan indikator loading
         const loadingMessage = document.createElement("div");
         loadingMessage.className = "message bot-message";
         loadingMessage.textContent = "Harap Tunggu...";
         chatMessages.appendChild(loadingMessage);
-    
         chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll ke bawah
     
         try {
@@ -79,31 +79,58 @@ document.addEventListener("DOMContentLoaded", () => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ user_input: userInput, model: selectedModel })
             });
-    
+
             const data = await response.json();
             chatMessages.removeChild(loadingMessage);
-    
+
             const botMessage = document.createElement("div");
             botMessage.className = "message bot-message";
-    
+
             if (response.ok && data.response) {
                 botMessage.innerHTML = `
-    <div style="text-align: left;">${data.response}</div>
-    <div style="text-align: right; font-size: 0.8em; color: black; margin-top: 4px;">${currentTime}</div>
-`;
+                    <div style="text-align: left;">${data.response}</div>
+                    <div style="text-align: right; font-size: 0.8em; color: black; margin-top: 4px;">${currentTime}</div>
+                `;
+                chatMessages.appendChild(botMessage);
+
+                // Tambahkan pesan bot baru "Terima kasih telah bertanya..." hanya jika tidak ada error
+                const thanksMessage = document.createElement("div");
+                thanksMessage.className = "message bot-message";
+                thanksMessage.innerHTML = `
+                    <div style="text-align: left;">Terima kasih telah mengajukan pertanyaan. Jika Anda ingin bertanya kembali, silakan ajukan pertanyaan lain terkait cuaca di wilayah Jawa Timur. Jika ingin keluar, Anda dapat mengklik tombol di pojok kanan atas.</div>
+                    <div style="text-align: right; font-size: 0.8em; color: black; margin-top: 4px;">${currentTime}</div>
+                `;
+                chatMessages.appendChild(thanksMessage);
+
             } else {
-                botMessage.textContent = "Tidak ada data cuaca untuk lokasi ini. Silakan coba lagi.";
+                let errorMessageText = "Terjadi kesalahan dalam memproses permintaan. Pastikan format pertanyaan Anda benar.";
+                if (data.error_type === "invalid_query") {
+                    errorMessageText = "Maaf, saya tidak mengerti pertanyaan Anda. Mohon periksa kembali kata-katanya!";
+                } else if (data.error_type === "location_not_found") {
+                    errorMessageText = "Lokasi yang Anda masukkan tidak ditemukan. Silakan coba dengan nama lokasi yang lebih spesifik.";
+                } else if (data.error_type === "server_error") {
+                    errorMessageText = "Terjadi kesalahan saat mengambil data cuaca. Silakan coba lagi nanti.";
+                }
+
+                botMessage.innerHTML = `
+                    <div style="text-align: left;">${errorMessageText}</div>
+                    <div style="text-align: right; font-size: 0.8em; color: black; margin-top: 4px;">${currentTime}</div>
+                `;
+                chatMessages.appendChild(botMessage);
             }
-    
-            chatMessages.appendChild(botMessage);
+
             chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll ke pesan terakhir
-    
+
         } catch (error) {
             chatMessages.removeChild(loadingMessage);
-            alert(`Error: ${error.message}`);
+            const errorMessage = document.createElement("div");
+            errorMessage.className = "message bot-message";
+            errorMessage.innerHTML = `
+                <div style="text-align: left;">Terjadi kesalahan dalam mengambil data. Mohon coba lagi nanti!</div>
+                <div style="text-align: right; font-size: 0.8em; color: black; margin-top: 4px;">${currentTime}</div>
+            `;
+            chatMessages.appendChild(errorMessage);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
         }
-        
-
-        chatMessages.scrollTop = chatMessages.scrollHeight;
     }
 });
