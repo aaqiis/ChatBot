@@ -52,53 +52,57 @@ document.addEventListener("DOMContentLoaded", () => {
         const userInput = chatInput.value.trim();
         const selectedModel = document.getElementById("modelSelector").value;
         if (!userInput) return;
-
+    
         const chatMessages = document.getElementById("chatMessages");
-
-        // Menampilkan pesan pengguna
+    
         const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
         const userMessage = document.createElement("div");
         userMessage.className = "message user-message";
-        userMessage.innerHTML = `${userInput} <span style="float: right; font-size: 0.8em; color: gray; margin-left: 8px;">${currentTime}</span>`;
+        userMessage.innerHTML = `
+    <div style="text-align: left;">${userInput}</div>
+    <div style="text-align: right; font-size: 0.8em; color: black; margin-top: 4px;">${currentTime}</div>
+`;
         chatMessages.appendChild(userMessage);
-
+    
         chatInput.value = "";
-
-        // Menampilkan loading message
+    
         const loadingMessage = document.createElement("div");
         loadingMessage.className = "message bot-message";
         loadingMessage.textContent = "Harap Tunggu...";
-        loadingMessage.style.color = "gray";
         chatMessages.appendChild(loadingMessage);
-
+    
+        chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll ke bawah
+    
         try {
             const response = await fetch('/get_cuaca', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body:`user_input=${encodeURIComponent(userInput)}&model=${encodeURIComponent(selectedModel)}`,
-        });
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ user_input: userInput, model: selectedModel })
+            });
+    
             const data = await response.json();
-
             chatMessages.removeChild(loadingMessage);
-
+    
             const botMessage = document.createElement("div");
             botMessage.className = "message bot-message";
-
+    
             if (response.ok && data.response) {
-                const botTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-                botMessage.innerHTML = `${data.response} <span style="float: right; font-size: 0.8em; color: gray; margin-left: 10px;">${botTime}</span>`;
+                botMessage.innerHTML = `
+    <div style="text-align: left;">${data.response}</div>
+    <div style="text-align: right; font-size: 0.8em; color: black; margin-top: 4px;">${currentTime}</div>
+`;
             } else {
-                botMessage.textContent = "Tidak ada data cuaca yang tersedia untuk lokasi ini. Silahkan berikan keterangan lokasi lengkap (Desa/Kecamatan/Kabupaten/Kota).";
+                botMessage.textContent = "Tidak ada data cuaca untuk lokasi ini. Silakan coba lagi.";
             }
-
+    
             chatMessages.appendChild(botMessage);
+            chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll ke pesan terakhir
+    
         } catch (error) {
             chatMessages.removeChild(loadingMessage);
-            const errorMessage = document.createElement("div");
-            errorMessage.className = "message bot-message";
-            errorMessage.textContent = `Error: ${error.message}`;
-            chatMessages.appendChild(errorMessage);
+            alert(`Error: ${error.message}`);
         }
+        
 
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }

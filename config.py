@@ -19,6 +19,7 @@ import google.generativeai as genai
 # Load variabel dari .env
 load_dotenv()
 
+
 # Ambil API key dari environment atau .env, gunakan None jika tidak ada
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 BMKG_API_ENDPOINT = os.getenv("BMKG_API_ENDPOINT")

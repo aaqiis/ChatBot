@@ -10,19 +10,21 @@
     <div class="chat-container" id="chatBox">
         <div class="chat-header">
             <div style="text-align: left;">
-                <span>🌦️ TANYA BMKG❓</span>
+                <span>🌦️ TANYA BMKG</span>
                 <small style="display: block; margin-top: 5px;">Melayani informasi cuaca hingga 3 hari ke depan!</small>
             </div>
             <button id="closeChat" style="color:white; background:none; border:none; font-size:20px; font-weight:bold; transform: scaleY(-1); cursor:pointer;">&#x21A9;</button>        
         </div>
         <div class="chat-messages" id="chatMessages">
-            <div class="message bot-message">Halo <span id="greetingText"></span> Sobat BMKG Juanda! 🤗</div>
-            <div class="message bot-message">
+            <div class="message bot-message welcome-message">Halo <span id="greetingText"></span> Sobat BMKG Juanda! 🤗</div>
+            <div class="message bot-message welcome-message">
                 Silahkan bertanya terkait cuaca di daerah Jawa Timur. Sertakan keterangan lokasi lengkapnya (Desa/Kecamatan/Kabupaten/Kota), keterangan waktu/tanggal {opsional}.<br>
                 Contoh:<br> 
-                1. Cuaca desa Pepe, Kecamatan Sedati besok <br>
-                2. Suhu Kota Surabaya saat ini <br>
-                3. Cuaca di Desa Ngoro, Kecamatan Ngoro, Kabupaten Mojokerto besok pukul 12.00
+                <ul>
+                    <li>Cuaca desa Pepe, Kecamatan Sedati besok</li>
+                    <li>Suhu Kota Surabaya saat ini</li>
+                    <li>Cuaca di Desa Ngoro Kecamatan Ngoro Kabupaten Mojokerto besok pukul 12.00</li>
+                </ul>
             </div>
         </div>
         <div class="chat-footer">

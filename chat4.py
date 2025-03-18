@@ -379,7 +379,7 @@ def process_prompt_gemini(bmkg_data, user_message):
 
 def process_prompt_deepseek(bmkg_data, user_message):
     # Konfigurasi API
-    OPENROUTER_API_KEY = DEEPSEEK_API_KEY  # Ganti dengan API Key Anda
+    OPENROUTER_API_KEY = DEEPSEEK_API_KEY  
    
 
     # Prompt untuk DeepSeek

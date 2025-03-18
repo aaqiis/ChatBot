@@ -1,19 +1,23 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     text-align: center;
-    background: transparent;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    background: transparent;
+    background-size: cover;
+    margin: 0;
 }
 
+/* Floating Chat Button */
 .chatbot-button {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 65px;
-    height: 65px;
+    bottom: 50px;
+    right: 40px;
+    width: 75px;
+    height: 75px;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -21,101 +25,282 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 .chatbot-button img {
-    width: 75px;
-    height: 75px;
+    width: 80px;
+    height: 80px;
     object-fit: cover;
     border-radius: 50%;
-    mix-blend-mode: multiply; 
+    transition: transform 0.3s ease;
+}
+.chatbot-button:hover img {
+    transform: scale(1.1);
 }
 
+/* Chat Window */
 .chat-container {
     display: none;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 350px;
-    height: 450px;
-    background: linear-gradient(to right, #b3ffd9, #a3c1ff);
+    width: 360px; 
+    height: 550px; 
+    background: linear-gradient(to right,#74b9ff, #a29bfe);
     border-radius: 15px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     flex-direction: column;
     overflow: hidden;
-    padding-bottom: 50px;
+}
+/* Chat Header */
+.chat-header {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.chat-header h1 {
+    font-size: 18px;
+    margin: 0;
+}
+.chat-header p {
+    font-size: 13px;
+    margin: 5px 0 8px;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;=-]['
+    ' ]
+    padding: 5px;
+    max-height: 280px; /* Menentukan tinggi maksimum */
+    overflow-y: auto; /* Scrollable jika isi terlalu panjang */
+    scrollbar-width: thin; /* Untuk browser yang mendukung */
+    scrollbar-color: #007bff #f1f1f1;
+}
+
+/* Card */
+.card {
+    width: 85%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 12px; /* Mengurangi padding agar lebih kecil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-container::-webkit-scrollbar {
+    width: 5px; /* Lebar scrollbar */
+}
+.card-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Warna latar belakang track */
+    border-radius: 10px;
+}
+.card-container::-webkit-scrollbar-thumb {
+    background: #007bff; /* Warna scrollbar */
+    border-radius: 10px;
+}
+.card-container::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+.card img {
+    width: 45px; /* Mengecilkan logo */
+    margin-bottom: 8px;
     
+}
+.card h2 {
+    font-size: 18px; /* Ukuran teks lebih kecil */
+    color: white;
+    margin-bottom: 5px;
+}
+.card p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.9);
+}
+.card a {
+    margin-top: 8px;
+    padding: 6px 12px; /* Mengurangi padding */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+.card a:hover {
+    background: rgba(255, 255, 255, 0.4);
 }
 
 .clock-container {
-    text-align: center;
-    color: rgba(128, 128, 128, 0.8);
-    font-weight: bold;
     position: absolute;
-    bottom: 30px;
+    bottom: 10px; /* 🔥 Geser lebih ke bawah */
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
+    height: 60px; /* Bisa disesuaikan */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgba(18, 16, 16, 0.9);
+    font-weight: bold;
 }
 
+/* Sesuaikan ukuran jam & tanggal agar tetap jelas */
 #clock {
-    font-size: 24px;
+    font-size: 18px;
 }
-
 #date {
-    font-size: 14px;
+    font-size: 12px;
 }
 
-h1 {
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2),  0px 0px 10px rgba(255, 255, 255, 0.5);
-    margin-bottom: 30px;
-    margin-top: 90px;
-}
 
-p {
-    font-size: 14px;
-    margin-bottom: 15px;
-    margin-top: 20px;
-}
-
-.button {
-    display: block;
-    width: 80%;
-    padding: 12px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    border: none;
-    font-size: 16px;
-    font-weight: bold;
-    margin: 40px auto 5px auto;
-    cursor: pointer;
-}
-
-.button:hover {
-    background-color: #0056b3;
-}
-
+/* Close Button */
 #closeBtn {
     background: none;
     border: none;
     color: black;
-    font-size: 36px;
+    font-size: 24px; /* Mengecilkan ukuran tombol close */
     cursor: pointer;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 8px;
+    right: 8px;
     z-index: 1000;
+    transition: transform 0.3s ease;
 }
-.bmkg-logo {
+#closeBtn:hover {
+    transform: scale(1.1);
+}
+.card a {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.wave {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 55px; 
-    height: 55px;
-    border-radius: 50%; 
-    object-fit: cover;
-    mix-blend-mode: multiply; 
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: wave-effect 0.5s linear;
 }
+
+@keyframes wave-effect {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+.bubble {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: bubble-rise 1.5s ease-out forwards;
+}
+
+@keyframes bubble-rise {
+    0% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5) translateY(-150px);
+        opacity: 0;
+    }
+}
+
+
+.cloud {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    background: linear-gradient(to bottom, rgba(242,249,254,1) 5%, rgba(214,240,253,1) 100%);
+    border-radius: 20px;
+    top: -30px; /* Menyesuaikan agar di atas jam */
+    left: -120px; /* Memulai dari luar layar */
+    opacity: 0.9;
+    z-index: 0;
+    animation: moveClouds 15s linear infinite, cloudDelay 18s infinite; 
+}
+
+/* Awan Kecil */
+.cloud.small {
+    top: -40px;
+    transform: scale(0.7);
+    opacity: 0.8;
+    animation: moveClouds 17s linear infinite, cloudDelay 20s infinite;
+}
+
+/* Efek tambahan awan */
+.cloud::before, .cloud::after {
+    content: "";
+    position: absolute;
+    background: inherit;
+}
+
+.cloud::before {
+    width: 36px;
+    height: 36px;
+    top: -18px;
+    right: 10px;
+    border-radius: 40px;
+}
+
+.cloud::after {
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    left: 10px;
+    border-radius: 20px;
+}
+
+/* Animasi Awan Bergerak dari Kiri ke Kanan */
+@keyframes moveClouds {
+    0% {
+        transform: translateX(-150px);
+        opacity: 1;
+    }
+    95% {
+        transform: translateX(100vw);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100vw);
+        opacity: 0; /* Agar menghilang di akhir */
+    }
+}
+
+/* Animasi untuk memberikan jeda 3 detik sebelum muncul kembali */
+@keyframes cloudDelay {
+    0%, 80% {
+        opacity: 1;
+    }
+    81%, 100% {
+        opacity: 0;
+    }
+}
+
+
+

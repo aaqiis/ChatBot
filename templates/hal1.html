@@ -7,20 +7,37 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/hal1.css') }}">
 </head>
 <body>
-    <button class="chatbot-button">
+    <!-- Floating Chat Button -->
+    <button class="chatbot-button" id="chatbotToggle">
         <img src="{{ url_for('static', filename='images/CHATBOT.png') }}" alt="Chatbot">
     </button>
     
+    <!-- Chat Window -->
     <div class="chat-container" id="chatBox">
-        <img class="bmkg-logo" src="{{ url_for('static', filename='images/bmkg-logo.png') }}" alt="BMKG Logo">
         <button type="button" id="closeBtn">&times;</button>
-        <h1>Halo Sobat BMKG Juanda</h1>
-        <p>Silahkan Pilih Pertanyaan Anda!</p>
-        <div style="margin-top: 10px;">
-            <button class="button" onclick="window.location.href='/cuaca'">Informasi Cuaca</button>
-            <button class="button" onclick="window.location.href='/umum'">Informasi Umum</button>
+        
+        <div class="chat-header">
+            <h1>Halo Sobat BMKG Juanda!</h1>
+            <p>Silahkan Pilih Pertanyaan Anda</p>
         </div>
-        <div class="clock-container" id="chatBox">
+
+        <div class="card-container">
+            <div class="card">
+                <img class="bmkg-logo" src="{{ url_for('static', filename='images/bmkg-logo.png') }}" alt="BMKG Logo">
+                <h2>Informasi Prakiraan Cuaca</h2>
+                <p>Dapatkan informasi cuaca terkini.</p>
+                <a href="/cuaca">Lihat Detail</a>
+            </div>
+            <div class="card">
+                <img class="bmkg-logo" src="{{ url_for('static', filename='images/bmkg-logo.png') }}" alt="BMKG Logo">
+                <h2>Informasi Umum</h2>
+                <p>Temukan informasi seputar BMKG.</p>
+                <a href="/umum">Lihat Detail</a>
+            </div>
+        </div>
+
+        <div class="clock-container">
+            <div class="cloud"></div> <!-- Awan di atas jam -->
             <div id="clock">00:00</div>
             <div id="date">1 Januari 2024</div>
         </div>

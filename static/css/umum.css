@@ -1,131 +1,268 @@
+/* General Styling */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background:transparent;
-    }
-    .chat-container {
+    background: transparent;
+    margin: 0;
+}
+
+/* Chat Container */
+.chat-container {
     position: fixed;
-    bottom: 20px; 
+    bottom: 20px;
     right: 20px;
-    width: 350px;
-    height: 500px;
-    background: white;
+    width: 360px;
+    height: 520px;
+    background: rgba(255, 255, 255, 0.85); /* Lebih transparan */
     border-radius: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
-    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    backdrop-filter: blur(15px); /* Efek kaca */
+}
 
-    }
-    .chat-header {
-        background: #0047cb;
-        color: rgb(255, 255, 255);
-        padding: 8px;
-        font-weight: bold;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-family: 'Arial', sans-serif;
-    }
-    .chat-header span {
-    font-size: 19px;
+/* Chat Header */
+.chat-header {
+    background: linear-gradient(135deg, #3B82F6, #4F46E5);
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.chat-header span {
+    font-size: 18px;
     font-weight: bold;
     margin-left: 8px;
-    font-family: 'Arial', sans-serif;
-    }
-    .chat-content {
-        padding: 15px;
-        text-align: left;
-        background: #ffff;
-        border-radius: 10px;
-        margin: 10px;
-        font-family: 'Arial', sans-serif;
-    }
-    .chat-messages {
-        flex: 1;
-        padding: 10px;
-        overflow-y: auto;
-        background-image: url("/static/images/cloud.jpg"); 
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: #ffff; 
-        background-blend-mode: lighten; 
-        display: flex; 
-        flex-direction: column;
-        max-height: 400px;
-        font-family: 'Arial', sans-serif; 
-    }
-    .message {
-        padding: 8px;
-        margin: 5px;
-        border-radius: 8px;
-        max-width: fit-content;
-        word-wrap: break-word;
-        display: inline-block;
-        position: relative;
-        text-align: left;
-        font-size: 16px;
-        font-family: 'Arial', sans-serif;
-    }
-    .user-message {
-        background-color: #DCF8C6;
-        align-self: flex-end;
-        padding: 5px 5px;
-        font-family: 'Arial', sans-serif;
-    }
-    .bot-message {
-        background-color: #d8f6f6;
-        padding: 5px 5px;
-        text-align: left;
-        width: relative;
-        font-family: 'Arial', sans-serif;
-    }
-    .chat-footer {
-        display: flex;
-        justify-content: center;
-        background: #0047cb;
-        padding: 8px;
-        border-top: transparent;
-        font-family: 'Arial', sans-serif;
-    }
-    .chat-footer form {
-        display: flex;
-        width: 100%;
-        /* gap: 6px;  */
-        align-items: center;
-    }
-    .chat-footer textarea {
-        flex: 1;
-        resize: none;
-        padding: 5px 10px;
-        border: 1px solid #ddd;
-        border-radius: 10px; 
-        font-size: 12px;
-        height: 20px; 
-        outline: none;
-        margin-right: 6px;
-        font-family: 'Arial', sans-serif;
-    }
-    .chat-footer button {
-        width: 35px;
-        height: 39px;
-        background-color: #309800;
-        border: none;
-        border-radius: 2px;;
-        cursor: pointer;
-        margin-top: 3px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .chat-footer button svg {
-        width: 20px;
-        height: 520px;
-        fill: white; 
-    }
+}
+.chat-header small {
+    font-size: 12px;
+    display: block;
+    margin-top: 8px;
+}
+
+/* Chat Messages Area */
+.chat-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #eaf4ff;
+    background-blend-mode: lighten;
+    display: flex;
+    flex-direction: column;
+    max-height: 420px;
+    scroll-behavior: smooth;
+    scroll-padding: 20px; /* Tambahkan padding saat scroll */
+}
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Chat Message */
+.message {
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 600;  
+    letter-spacing: 0.5px;  
+    font-size: 15px;
+    padding: 10px;  
+    margin-bottom: 12px; /* Tambahkan jarak antar pesan */
+    border-radius: 12px;
+}
+.user-message {
+    background: linear-gradient(135deg, #98FB98, #00C853);
+    color: #155724;
+    align-self: flex-end;
+    text-align: left;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    max-width: 75%;
+    position: relative; 
+    display: inline-block;
+    padding-bottom: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); 
+}
+/* Bot Message */
+.bot-message {
+    background: linear-gradient(135deg, #B3E5FC, #2196F3);
+    color: #0D47A1; 
+    align-self: flex-start;
+    text-align: left;
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    max-width: 75%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5px; 
+}
+/* Format Jam di Pojok Kanan Bawah */
+.timestamp {
+    font-size: 0.75em;
+    color: black;
+    text-align: right;
+    margin-top: 8px; /* Jarak lebih jauh dari teks */
+    align-self: flex-end;
+    position: relative; /* Hapus absolute biar ngikut teks */
+    display: block; /* Pastikan tampil di bawah pesan */
+}
+/* Pisahkan teks bot */
+.bot-message .bot-text {
+    display: block;
+    word-wrap: break-word;
+}
+
+/* Chat Footer */
+.chat-footer {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-top: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+/* Input Area */
+.chat-footer form {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.chat-footer textarea {
+    flex: 1;
+    resize: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 14px;
+    height: 38px;
+    outline: none;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding-left: 15px;
+}
+
+/* Send Button */
+.chat-footer button {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+.chat-footer button:hover {
+    transform: scale(1.1);
+}
+
+/* Send Button Icon */
+.chat-footer button svg {
+    width: 22px;
+    height: 22px;
+    fill: white;
+}
+
+/* Ukuran teks utama lebih besar */
+.chat-header span {
+    font-size: 20px;  
+    font-weight: 700;  
+}
+
+/* Ukuran teks kecil di bawahnya */
+.chat-header small {
+    font-size: 14px;  
+    font-weight: 600;  
+    color: #f1f1f1;  
+}
+
+/* Tombol Close Chat */
+#closeChat {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px; 
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+#closeChat:hover {
+    transform: scale(1.2); 
+}
+
+.bot-message ul {
+    margin-top: 5px;
+    padding-left: 20px; /* Jarak agar bullet tidak terlalu dekat ke tepi */
+    text-align: left; /* Rata kiri */
+}
+
+.bot-message li {
+    margin-bottom: 5px; /* Jarak antar bullet point */
+}
+
+.welcome-message {
+    background: linear-gradient(135deg, #B3E5FC, #2196F3); 
+    color: #0D47A1; 
+    text-align: center; 
+    align-self: center; 
+    width: 90%; 
+    max-width: 90%;
+    padding: 12px; 
+    border-radius: 12px; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
+    font-weight: 600;
+}
+.scroll-buttons {
+    position: absolute;
+    bottom: 60px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.scroll-buttons button {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease;
+}
+
+.scroll-buttons button:hover {
+    transform: scale(1.1);
+}
+#greetingMessage {
+    text-align: center; 
+    align-self: center; 
+    width: 90%; 
+    max-width: 90%;
+    padding: 12px; 
+    border-radius: 12px; 
+    background: linear-gradient(135deg, #B3E5FC, #2196F3); 
+    color: #0D47A1;
+    font-weight: 600;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
