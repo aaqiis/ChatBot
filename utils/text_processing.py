@@ -34,19 +34,19 @@ def process_prompt_gemini(bmkg_data, user_input):
         {user_input}
 
         Waktu saat ini adalah {formatted_time} WIB ({time_of_day}).
-        Jawablah pertanyaan pengguna dengan jelas, singkat, tanpa huruf bold disemua text. sebutkan lokasi lengkap, serta berikan saran kegiatan atau pengingat sesuai keadaan yang terjadi pada pertanyaan.
+        Jawablah pertanyaan pengguna dengan jelas, singkat. sebutkan lokasi lengkap, serta berikan saran kegiatan atau pengingat sesuai keadaan yang terjadi pada pertanyaan.
         -Pukul 05.00-12.00 menunjukkan Pagi
         -Pukul 12.00-15.00 menunjukkan Siang
         -Pukul 15.00-18.00 menunjukkan Sore
         -Pukul 19.00-22.00 menunjukkan Malam
         -Pukul 01.00-05.00 menunjukkan Dini Hari
         Jika pengguna bertanya lebih dari waktu yang ada dalam data BMKG, jawablah dengan "Mohon maaf data kami hanya menampilkan hingga 3 hari kedepan"
-        Jika pengguna bertanya terkait waktu jawablah dengan waktu sesuai permintaannya.
-        Jika pertanyaan tidak terkait BMKG atau wilayah tidak ditemukan, balas dengan: "Mohon maaf Sobat, pertanyaan tidak tersedia dalam data kami. Silahkan berikan pertanyaan seputar cuaca di daerah Jawa Timur dan sertakan keterangan lokasi daerah lengkap (Desa/Kecamatan/Kabupaten/Kota)".   
+        Jika pengguna bertanya terkait waktu jawablah dengan waktu sesuai permintaannya.  
         """
         logger.info("Mengirim prompt ke model AI.")
         # response = model.generate_content(prompt)
         response = gemini_model.generate_content(prompt)
+        logger.info(f"📥 Respons mentah dari Gemini:\n{response}")
         
         if not response or not hasattr(response, 'candidates') or not response.candidates:
                 logger.error("❌ Respons dari Gemini tidak valid atau kosong.")
@@ -89,15 +89,14 @@ def process_prompt_deepseek(bmkg_data, user_message):
         {user_message}
 
         Waktu saat ini adalah {formatted_time} WIB ({time_of_day}).
-        Jawablah pertanyaan pengguna dengan jelas, singkat, tanpa huruf bold disemua text. sebutkan lokasi lengkap, serta berikan saran kegiatan atau pengingat sesuai keadaan yang terjadi pada pertanyaan.
+        Jawablah pertanyaan pengguna dengan jelas, singkat. sebutkan lokasi lengkap, serta berikan saran kegiatan atau pengingat sesuai keadaan yang terjadi pada pertanyaan.
         -Pukul 05.00-10.00 menunjukkan Pagi
         -Pukul 11.00-15.00 menunjukkan Siang
         -Pukul 15.00-18.00 menunjukkan Sore
         -Pukul 19.00-22.00 menunjukkan Malam
         -Pukul 01.00-05.00 menunjukkan Dini Hari
         Jika pengguna bertanya lebih dari  yang ada dalam data BMKG, jawablah dengan "Mohon maaf data kami hanya menampilkan hingga 3 hari kedepan"
-        Jika pengguna bertanya terkait waktu jawablah dengan waktu sesuai permintaannya.
-        Jika pertanyaan tidak terkait BMKG atau wilayah tidak ditemukan, balas dengan: "Mohon maaf Sobat, pertanyaan tidak tersedia dalam data kami. Silahkan berikan pertanyaan seputar cuaca di daerah Jawa Timur dan sertakan keterangan lokasi daerah lengkap (Desa/Kecamatan/Kabupaten/Kota)".   
+        Jika pengguna bertanya terkait waktu jawablah dengan waktu sesuai permintaannya. 
         """
 
         response = requests.post(

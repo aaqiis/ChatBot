@@ -11,9 +11,9 @@ def getName(user_message):
     user_message = user_message.lower()
 
     user_message = re.sub(
-    r"\b(besok|lusa|hari ini|jam|nanti|siang|sore|malam|pagi|saat ini|cuaca(nya)|sebentar lagi|lagi|barusan|baru saja|bentar|sering|jarang|setiap|tiap|terkadang|sekarang|"
-    r"apakah|bagaimana|seperti apa|kapan|dimana|mengapa|kenapa|sedang|itu|di|berada|ada|mungkinkah|mungkin|akan|emang|akankah|yakin(kah)?|sudah(kah)?|masih(kah)?|betul(kah)?|"
-    r"sering(kah)?|ada(kah)?|bisa(kah)?|tidak(kah)?|bener(an)?|benar|mau|agak|lumayan|terlalu|cukup|hujan|panas(nya)|mendung|cerah|berawan|gerimis|dingin|hangat|kabut|badai|"
+    r"\b(besok|lusa|hari ini|jam|nanti|siang|sore|malam|pagi|saat ini|cuaca(nya)|sebentar lagi|lagi|barusan|baru saja|bentar|sering|jarang|setiap|tiap|terkadang|sekarang|saat ini|"
+    r"apakah|bagaimana|seperti apa|kapan|esok|dimana|jika|berapa|mengapa|kenapa|sedang|itu|di|berada|ada|mungkinkah|mungkin|akan|emang|akankah|yakin(kah)?|sudah(kah)?|masih(kah)?|betul(kah)?|"
+    r"sering(kah)?|ada(kah)?|bisa(kah)?|tidak(kah)?|bener(an)?|benar(kah)|mau|agak|lumayan|terlalu|cukup|hujan|panas(nya)|mendung|cerah|berawan|gerimis|dingin|hangat|kabut|badai|"
     r"angin|petir|suhu(nya))\b|\d+|[^\w\s]",
     "",
     user_message

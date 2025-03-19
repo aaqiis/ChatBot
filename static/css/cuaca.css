@@ -15,8 +15,8 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 360px;
-    height: 520px;
+    width: 370px;
+    height: 550px;
     background: rgba(255, 255, 255, 0.85); /* Lebih transparan */
     border-radius: 15px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
