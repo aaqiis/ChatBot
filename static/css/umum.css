@@ -15,7 +15,8 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 370px;
+    width: 90%;
+    max-width: 370px;
     height: 550px;
     background: rgba(255, 255, 255, 0.85); /* Lebih transparan */
     border-radius: 15px;
@@ -96,7 +97,7 @@ body {
 }
 /* Bot Message */
 .bot-message {
-    background: linear-gradient(135deg, #B3E5FC, #2196F3);
+    background: linear-gradient(135deg, #B3E5FC, #35a2fb);
     color: #0D47A1; 
     align-self: flex-start;
     text-align: left;
@@ -131,7 +132,8 @@ body {
     align-items: center;
     padding: 12px;
     border-top: 1px solid #ddd;
-    background: rgba(255, 255, 255, 0.9);
+    background: linear-gradient(135deg, #1E40AF, #3B82F6);
+    gap: 10px;
 }
 
 /* Input Area */
@@ -139,6 +141,7 @@ body {
     display: flex;
     width: 100%;
     align-items: center;
+    gap: 10px;
 }
 .chat-footer textarea {
     flex: 1;
@@ -151,6 +154,8 @@ body {
     outline: none;
     box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
     padding-left: 15px;
+    width: 100%; /* Membuat textarea lebih lebar */
+    max-width: calc(100% - 60px);
 }
 
 /* Send Button */
